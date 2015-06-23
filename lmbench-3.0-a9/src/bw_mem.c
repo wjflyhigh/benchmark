@@ -69,12 +69,8 @@ main(int ac, char **av)
 
 	state.overhead = 0;
 
-	while (( c = getopt(ac, av, "P:W:N:")) != EOF) {
+	while (( c = getopt(ac, av, "W:N:")) != EOF) {
 		switch(c) {
-		case 'P':
-			parallel = atoi(optarg);
-			if (parallel <= 0) lmbench_usage(ac, av, usage);
-			break;
 		case 'W':
 			warmup = atoi(optarg);
 			break;
@@ -152,7 +148,10 @@ init_loop(iter_t iterations, void *cookie)
 
 	if (iterations) return;
 
-        state->buf = (TYPE *)valloc(state->nbytes);
+	/* modify by shixing */
+	TYPE buf_tmp[state->nbytes];
+	state->buf = buf_tmp;
+//        state->buf = (TYPE *)valloc(state->nbytes);
 	state->buf2_orig = NULL;
 	state->lastone = (TYPE*)state->buf - 1;
 	state->lastone = (TYPE*)((char *)state->buf + state->nbytes - 512);
@@ -165,7 +164,10 @@ init_loop(iter_t iterations, void *cookie)
 	bzero((void*)state->buf, state->nbytes);
 
 	if (state->need_buf2 == 1) {
-		state->buf2_orig = state->buf2 = (TYPE *)valloc(state->nbytes + 2048);
+		/* modify by shixing */
+		TYPE buf_tmp2[state->nbytes + 2048];
+		state->buf_tmp2 = buf_tmp2;
+//		state->buf2_orig = state->buf2 = (TYPE *)valloc(state->nbytes + 2048);
 		if (!state->buf2) {
 			perror("malloc");
 			exit(1);
@@ -189,8 +191,8 @@ cleanup(iter_t iterations, void *cookie)
 
 	if (iterations) return;
 
-	free(state->buf);
-	if (state->buf2_orig) free(state->buf2_orig);
+//	free(state->buf);
+//	if (state->buf2_orig) free(state->buf2_orig);
 }
 
 void

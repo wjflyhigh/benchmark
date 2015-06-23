@@ -1,0 +1,1288 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS	./cache.c	49;"	d	file:
+ABS	./cache.c	51;"	d	file:
+ABS	./stats.h	7;"	d
+AKEFLAGS	./Makefile	/^	cd ..\/doc; env MAKEFLAGS="$(MAKEFLAGS)" make CC="${CC}" OS="${OS}" BASE="$(BASE)" install$/;"	m
+ALIGN	./lmdd.c	48;"	d	file:
+ALIGN	./lmdd.c	49;"	d	file:
+AR	./Makefile	/^AR=ar$/;"	m
+ARCREATE	./Makefile	/^ARCREATE=cr$/;"	m
+ASMS	./Makefile	/^ASMS =  $O\/bw_file_rd.s $O\/bw_mem.s $O\/bw_mmap_rd.s $O\/bw_pipe.s 	\\$/;"	m
+BASE	./Makefile	/^BASE=\/usr\/local$/;"	m
+BENCH	./bench.h	224;"	d
+BENCH1	./bench.h	238;"	d
+BENCHMARK	./par_ops.c	80;"	d	file:
+BENCHO	./bench.h	199;"	d
+BENCH_INNER	./bench.h	246;"	d
+BIGSEEK	./lib_timing.c	1692;"	d	file:
+BINDIR	./Makefile	/^BINDIR=..\/bin\/$(OS)$/;"	m
+BIT_SET	./mhz.c	168;"	d	file:
+BODY	./par_ops.c	133;"	d	file:
+BODY	./par_ops.c	139;"	d	file:
+BODY	./par_ops.c	145;"	d	file:
+BODY	./par_ops.c	151;"	d	file:
+BODY	./par_ops.c	158;"	d	file:
+BODY	./par_ops.c	164;"	d	file:
+BODY	./par_ops.c	174;"	d	file:
+BODY	./par_ops.c	180;"	d	file:
+BODY	./par_ops.c	187;"	d	file:
+BODY	./par_ops.c	193;"	d	file:
+BODY	./par_ops.c	200;"	d	file:
+BODY	./par_ops.c	206;"	d	file:
+BODY	./par_ops.c	216;"	d	file:
+BODY	./par_ops.c	222;"	d	file:
+BODY	./par_ops.c	231;"	d	file:
+BODY	./par_ops.c	237;"	d	file:
+BODY	./par_ops.c	248;"	d	file:
+BODY	./par_ops.c	254;"	d	file:
+BODY	./par_ops.c	262;"	d	file:
+BODY	./par_ops.c	268;"	d	file:
+BODY	./par_ops.c	274;"	d	file:
+BODY	./par_ops.c	280;"	d	file:
+BODY	./par_ops.c	287;"	d	file:
+BODY	./par_ops.c	293;"	d	file:
+BODY	./par_ops.c	300;"	d	file:
+BODY	./par_ops.c	306;"	d	file:
+BODY	./par_ops.c	313;"	d	file:
+BODY	./par_ops.c	319;"	d	file:
+BODY	./par_ops.c	326;"	d	file:
+BODY	./par_ops.c	332;"	d	file:
+BODY	./par_ops.c	339;"	d	file:
+BODY	./par_ops.c	345;"	d	file:
+BODY	./par_ops.c	352;"	d	file:
+BODY	./stream.c	199;"	d	file:
+BOOTSTRAP_COUNT	./lib_stats.c	4;"	d	file:
+Bsize	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+CC	./Makefile	/^CC=`..\/scripts\/compiler`$/;"	m
+CHK	./bw_file_rd.c	19;"	d	file:
+CHK	./bw_mmap_rd.c	28;"	d	file:
+CHK	./lat_mmap.c	24;"	d	file:
+CHK	./lat_pagefault.c	17;"	d	file:
+CHK	./memsize.c	15;"	d	file:
+CHUNK	./lat_ctx.c	18;"	d	file:
+COMPILE	./Makefile	/^COMPILE=$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)$/;"	m
+CONFIG	./Makefile	/^CONFIG=..\/bin\/$(OS)\/`..\/scripts\/config`$/;"	m
+CONNAME	./lat_unix_connect.c	18;"	d	file:
+D	./Makefile	/^D= ..\/doc$/;"	m
+DECLARE	./lib_mem.c	23;"	d	file:
+DECLARE	./par_ops.c	134;"	d	file:
+DECLARE	./par_ops.c	140;"	d	file:
+DECLARE	./par_ops.c	146;"	d	file:
+DECLARE	./par_ops.c	152;"	d	file:
+DECLARE	./par_ops.c	159;"	d	file:
+DECLARE	./par_ops.c	165;"	d	file:
+DECLARE	./par_ops.c	175;"	d	file:
+DECLARE	./par_ops.c	181;"	d	file:
+DECLARE	./par_ops.c	188;"	d	file:
+DECLARE	./par_ops.c	194;"	d	file:
+DECLARE	./par_ops.c	201;"	d	file:
+DECLARE	./par_ops.c	207;"	d	file:
+DECLARE	./par_ops.c	217;"	d	file:
+DECLARE	./par_ops.c	223;"	d	file:
+DECLARE	./par_ops.c	232;"	d	file:
+DECLARE	./par_ops.c	238;"	d	file:
+DECLARE	./par_ops.c	249;"	d	file:
+DECLARE	./par_ops.c	255;"	d	file:
+DECLARE	./par_ops.c	263;"	d	file:
+DECLARE	./par_ops.c	269;"	d	file:
+DECLARE	./par_ops.c	275;"	d	file:
+DECLARE	./par_ops.c	281;"	d	file:
+DECLARE	./par_ops.c	288;"	d	file:
+DECLARE	./par_ops.c	294;"	d	file:
+DECLARE	./par_ops.c	301;"	d	file:
+DECLARE	./par_ops.c	307;"	d	file:
+DECLARE	./par_ops.c	314;"	d	file:
+DECLARE	./par_ops.c	320;"	d	file:
+DECLARE	./par_ops.c	327;"	d	file:
+DECLARE	./par_ops.c	333;"	d	file:
+DECLARE	./par_ops.c	340;"	d	file:
+DECLARE	./par_ops.c	346;"	d	file:
+DECLARE	./par_ops.c	353;"	d	file:
+DEREF	./cache.c	61;"	d	file:
+DEREF	./lib_mem.c	22;"	d	file:
+DOIT	./bw_mem.c	207;"	d	file:
+DOIT	./bw_mem.c	219;"	d	file:
+DOIT	./bw_mem.c	230;"	d	file:
+DOIT	./bw_mem.c	240;"	d	file:
+DOIT	./bw_mem.c	252;"	d	file:
+DOIT	./bw_mem.c	263;"	d	file:
+DOIT	./bw_mem.c	276;"	d	file:
+DOIT	./bw_mem.c	289;"	d	file:
+DOIT	./bw_mem.c	301;"	d	file:
+DOIT	./bw_mem.c	330;"	d	file:
+DOIT	./bw_mem.c	343;"	d	file:
+DOIT	./bw_mem.c	371;"	d	file:
+DOIT	./bw_mem.c	383;"	d	file:
+Delta	./lib_timing.c	/^Delta(void)$/;"	f
+Dflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+ENOUGH	./bench.h	177;"	d
+ENOUGH_DURATION_TEN	./lib_timing.c	1431;"	d	file:
+EXES	./Makefile	/^EXES =	$O\/bw_file_rd $O\/bw_mem $O\/bw_mmap_rd $O\/bw_pipe $O\/bw_tcp 	\\$/;"	m
+End	./lmdd.c	/^uint64	Start, End, Rand, int_count;$/;"	v
+F1	./lat_fifo.c	15;"	d	file:
+F2	./lat_fifo.c	16;"	d	file:
+FIFTY	./cache.c	59;"	d	file:
+FIFTY	./lat_dram_page.c	81;"	d	file:
+FIFTY	./lat_mem_rd.c	90;"	d	file:
+FIFTY	./lib_mem.c	19;"	d	file:
+FIFTY	./par_ops.c	19;"	d	file:
+FIVE	./cache.c	57;"	d	file:
+FIVE	./lat_dram_page.c	79;"	d	file:
+FIVE	./lat_mem_rd.c	88;"	d	file:
+FIVE	./lat_ops.c	37;"	d	file:
+FIVE	./lib_mem.c	17;"	d	file:
+FIVE	./par_ops.c	17;"	d	file:
+FLAGS	./Makefile	/^	-@env CFLAGS=-O MAKE="$(MAKE)" MAKEFLAGS="k$(MAKEFLAGS)" CC="$(CC)" OS="$(OS)" ..\/scripts\/build opt$/;"	m
+FLUSH	./lmdd.c	34;"	d	file:
+FNAME	./lat_syscall.c	12;"	d	file:
+FORWARD	./disk.c	214;"	d	file:
+FORWARD1	./disk.c	215;"	d	file:
+FORWARD2	./disk.c	216;"	d	file:
+Flush	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+Fsync	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+GO_AWAY	./bench.h	172;"	d
+HUNDRED	./cache.c	60;"	d	file:
+HUNDRED	./lat_dram_page.c	82;"	d	file:
+HUNDRED	./lat_mem_rd.c	91;"	d	file:
+HUNDRED	./lat_ops.c	39;"	d	file:
+HUNDRED	./lib_mem.c	20;"	d	file:
+HUNDRED	./mhz.c	112;"	d	file:
+HUNDRED	./par_ops.c	20;"	d	file:
+INCS	./Makefile	/^INCS =	bench.h lib_mem.h lib_tcp.h lib_udp.h stats.h timing.h$/;"	m
+INIT	./lib_mem.c	24;"	d	file:
+INIT	./par_ops.c	135;"	d	file:
+INIT	./par_ops.c	141;"	d	file:
+INIT	./par_ops.c	147;"	d	file:
+INIT	./par_ops.c	153;"	d	file:
+INIT	./par_ops.c	160;"	d	file:
+INIT	./par_ops.c	166;"	d	file:
+INIT	./par_ops.c	176;"	d	file:
+INIT	./par_ops.c	182;"	d	file:
+INIT	./par_ops.c	189;"	d	file:
+INIT	./par_ops.c	195;"	d	file:
+INIT	./par_ops.c	202;"	d	file:
+INIT	./par_ops.c	208;"	d	file:
+INIT	./par_ops.c	218;"	d	file:
+INIT	./par_ops.c	224;"	d	file:
+INIT	./par_ops.c	233;"	d	file:
+INIT	./par_ops.c	239;"	d	file:
+INIT	./par_ops.c	250;"	d	file:
+INIT	./par_ops.c	256;"	d	file:
+INIT	./par_ops.c	264;"	d	file:
+INIT	./par_ops.c	270;"	d	file:
+INIT	./par_ops.c	276;"	d	file:
+INIT	./par_ops.c	282;"	d	file:
+INIT	./par_ops.c	289;"	d	file:
+INIT	./par_ops.c	295;"	d	file:
+INIT	./par_ops.c	302;"	d	file:
+INIT	./par_ops.c	308;"	d	file:
+INIT	./par_ops.c	315;"	d	file:
+INIT	./par_ops.c	321;"	d	file:
+INIT	./par_ops.c	328;"	d	file:
+INIT	./par_ops.c	334;"	d	file:
+INIT	./par_ops.c	341;"	d	file:
+INIT	./par_ops.c	347;"	d	file:
+INIT	./par_ops.c	354;"	d	file:
+INSTALL	./Makefile	/^INSTALL=cp$/;"	m
+IO	./disk.c	122;"	d	file:
+IO	./disk.c	123;"	d	file:
+IO	./disk.c	90;"	d	file:
+IOSIZE	./disk.c	125;"	d	file:
+ITIMER	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+K	./lat_ops.c	/^	int	K;$/;"	m	struct:_state	file:
+K	./par_ops.c	/^	int	K;$/;"	m	struct:_state	file:
+KB	./lib_timing.c	29;"	d	file:
+LIBOBJS	./Makefile	/^LIBOBJS= $O\/lib_tcp.o $O\/lib_udp.o $O\/lib_unix.o $O\/lib_timing.o 	\\$/;"	m
+LMBENCH_MEM_H	./lib_mem.h	2;"	d
+LOGFILE	./lmhttp.c	23;"	d	file:
+LONGER	./bench.h	176;"	d
+LOWER	./lat_mem_rd.c	19;"	d	file:
+Label	./lmdd.c	/^char	*Label;$/;"	v
+M	./lat_ops.c	/^	int	M;$/;"	m	struct:_state	file:
+M	./par_ops.c	/^	int	M;$/;"	m	struct:_state	file:
+MAJOR	./version.h	1;"	d
+MAKE	./Makefile	/^MAKE=`..\/scripts\/make`$/;"	m
+MAXPROC	./lat_ctx.c	17;"	d	file:
+MAX_COUNT	./mhz.c	324;"	d	file:
+MAX_LOAD_PARALLELISM	./par_ops.c	22;"	d	file:
+MAX_MEM_PARALLELISM	./lib_mem.h	5;"	d
+MAX_MSIZE	./bw_udp.c	19;"	d	file:
+MAX_MSIZE	./lat_udp.c	18;"	d	file:
+MB	./bw_mem.c	443;"	d	file:
+MB	./lib_timing.c	28;"	d	file:
+MEDIUM	./bench.h	175;"	d
+MEM_BENCHMARK_DECL	./lib_mem.h	6;"	d
+MEM_BENCHMARK_DEF	./lib_mem.c	32;"	d	file:
+MEM_BENCHMARK_F	./lib_mem.c	27;"	d	file:
+MHZ	./mhz.c	115;"	d	file:
+MIN	./bw_file_rd.c	21;"	d	file:
+MINOR	./version.h	2;"	d
+MINSIZE	./lat_mmap.c	22;"	d	file:
+MINSZ	./bw_file_rd.c	25;"	d	file:
+MINSZ	./bw_mmap_rd.c	27;"	d	file:
+MMAPS_BETTER	./lmhttp.c	22;"	d	file:
+MMAP_FLAGS	./bw_mmap_rd.c	21;"	d	file:
+MMAP_FLAGS	./bw_mmap_rd.c	23;"	d	file:
+MMAP_FLAGS	./lmhttp.c	18;"	d	file:
+MMAP_FLAGS	./lmhttp.c	20;"	d	file:
+N	./bench.h	/^	int	N;$/;"	m	struct:__anon2
+N	./bw_mem.c	/^	size_t	N;$/;"	m	struct:_state	file:
+N	./lat_mmap.c	20;"	d	file:
+N	./lat_ops.c	/^	int	N;$/;"	m	struct:_state	file:
+N	./par_ops.c	/^	int	N;$/;"	m	struct:_state	file:
+NANOSLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+NO_PORTMAPPER	./bench.h	88;"	d
+NTESTS	./mhz.c	167;"	d	file:
+Notrunc	./lmdd.c	/^int	Realtime, Notrunc;$/;"	v
+Now	./lib_timing.c	/^Now(void)$/;"	f
+O	./Makefile	/^O= ..\/bin\/unknown$/;"	m
+ONE	./lat_dram_page.c	78;"	d	file:
+ONE	./lat_mem_rd.c	87;"	d	file:
+OPT_EXES	./Makefile	/^OPT_EXES=$O\/cache $O\/lat_dram_page $O\/lat_pmake $O\/lat_rand 		\\$/;"	m
+OS	./Makefile	/^OS=`..\/scripts\/os`$/;"	m
+PARALLEL_BENCHMARKS	./par_ops.c	/^PARALLEL_BENCHMARKS(integer_bit)$/;"	f
+PARALLEL_BENCHMARKS	./par_ops.c	96;"	d	file:
+PORTMAP	./bench.h	38;"	d
+PREAMBLE	./par_ops.c	136;"	d	file:
+PREAMBLE	./par_ops.c	142;"	d	file:
+PREAMBLE	./par_ops.c	148;"	d	file:
+PREAMBLE	./par_ops.c	155;"	d	file:
+PREAMBLE	./par_ops.c	161;"	d	file:
+PREAMBLE	./par_ops.c	171;"	d	file:
+PREAMBLE	./par_ops.c	177;"	d	file:
+PREAMBLE	./par_ops.c	184;"	d	file:
+PREAMBLE	./par_ops.c	190;"	d	file:
+PREAMBLE	./par_ops.c	197;"	d	file:
+PREAMBLE	./par_ops.c	203;"	d	file:
+PREAMBLE	./par_ops.c	213;"	d	file:
+PREAMBLE	./par_ops.c	219;"	d	file:
+PREAMBLE	./par_ops.c	228;"	d	file:
+PREAMBLE	./par_ops.c	234;"	d	file:
+PREAMBLE	./par_ops.c	245;"	d	file:
+PREAMBLE	./par_ops.c	251;"	d	file:
+PREAMBLE	./par_ops.c	259;"	d	file:
+PREAMBLE	./par_ops.c	265;"	d	file:
+PREAMBLE	./par_ops.c	271;"	d	file:
+PREAMBLE	./par_ops.c	277;"	d	file:
+PREAMBLE	./par_ops.c	284;"	d	file:
+PREAMBLE	./par_ops.c	290;"	d	file:
+PREAMBLE	./par_ops.c	297;"	d	file:
+PREAMBLE	./par_ops.c	303;"	d	file:
+PREAMBLE	./par_ops.c	310;"	d	file:
+PREAMBLE	./par_ops.c	316;"	d	file:
+PREAMBLE	./par_ops.c	323;"	d	file:
+PREAMBLE	./par_ops.c	329;"	d	file:
+PREAMBLE	./par_ops.c	336;"	d	file:
+PREAMBLE	./par_ops.c	342;"	d	file:
+PREAMBLE	./par_ops.c	349;"	d	file:
+PREAMBLE	./par_ops.c	355;"	d	file:
+PROG	./lat_proc.c	20;"	d	file:
+PROG	./lat_proc.c	23;"	d	file:
+PSELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+PSIZE	./lat_mmap.c	19;"	d	file:
+Print	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+REAL_SHORT	./bench.h	173;"	d
+REPEAT_0	./lib_mem.h	9;"	d
+REPEAT_0	./par_ops.c	63;"	d	file:
+REPEAT_1	./lib_mem.h	10;"	d
+REPEAT_1	./par_ops.c	64;"	d	file:
+REPEAT_10	./lib_mem.h	19;"	d
+REPEAT_10	./par_ops.c	73;"	d	file:
+REPEAT_11	./lib_mem.h	20;"	d
+REPEAT_11	./par_ops.c	74;"	d	file:
+REPEAT_12	./lib_mem.h	21;"	d
+REPEAT_12	./par_ops.c	75;"	d	file:
+REPEAT_13	./lib_mem.h	22;"	d
+REPEAT_13	./par_ops.c	76;"	d	file:
+REPEAT_14	./lib_mem.h	23;"	d
+REPEAT_14	./par_ops.c	77;"	d	file:
+REPEAT_15	./lib_mem.h	24;"	d
+REPEAT_15	./par_ops.c	78;"	d	file:
+REPEAT_2	./lib_mem.h	11;"	d
+REPEAT_2	./par_ops.c	65;"	d	file:
+REPEAT_3	./lib_mem.h	12;"	d
+REPEAT_3	./par_ops.c	66;"	d	file:
+REPEAT_4	./lib_mem.h	13;"	d
+REPEAT_4	./par_ops.c	67;"	d	file:
+REPEAT_5	./lib_mem.h	14;"	d
+REPEAT_5	./par_ops.c	68;"	d	file:
+REPEAT_6	./lib_mem.h	15;"	d
+REPEAT_6	./par_ops.c	69;"	d	file:
+REPEAT_7	./lib_mem.h	16;"	d
+REPEAT_7	./par_ops.c	70;"	d	file:
+REPEAT_8	./lib_mem.h	17;"	d
+REPEAT_8	./par_ops.c	71;"	d	file:
+REPEAT_9	./lib_mem.h	18;"	d
+REPEAT_9	./par_ops.c	72;"	d	file:
+RESULTS	./Makefile	/^RESULTS=Results\/$(OS)$/;"	m
+RPC_EXIT	./bench.h	347;"	d
+RPC_XACT	./bench.h	346;"	d
+Rand	./lmdd.c	/^uint64	Start, End, Rand, int_count;$/;"	v
+Realtime	./lmdd.c	/^int	Realtime, Notrunc;$/;"	v
+Rtmax	./lmdd.c	/^int	Rtmax, Rtmin, Wtmax, Wtmin;$/;"	v
+Rtmin	./lmdd.c	/^int	Rtmax, Rtmin, Wtmax, Wtmin;$/;"	v
+SAMPLES	./Makefile	/^SAMPLES=lmbench\/Results\/aix\/rs6000 lmbench\/Results\/hpux\/snake \\$/;"	m
+SAVE	./lib_mem.c	25;"	d	file:
+SAVE	./par_ops.c	137;"	d	file:
+SAVE	./par_ops.c	143;"	d	file:
+SAVE	./par_ops.c	149;"	d	file:
+SAVE	./par_ops.c	156;"	d	file:
+SAVE	./par_ops.c	162;"	d	file:
+SAVE	./par_ops.c	172;"	d	file:
+SAVE	./par_ops.c	178;"	d	file:
+SAVE	./par_ops.c	185;"	d	file:
+SAVE	./par_ops.c	191;"	d	file:
+SAVE	./par_ops.c	198;"	d	file:
+SAVE	./par_ops.c	204;"	d	file:
+SAVE	./par_ops.c	214;"	d	file:
+SAVE	./par_ops.c	220;"	d	file:
+SAVE	./par_ops.c	229;"	d	file:
+SAVE	./par_ops.c	235;"	d	file:
+SAVE	./par_ops.c	246;"	d	file:
+SAVE	./par_ops.c	252;"	d	file:
+SAVE	./par_ops.c	260;"	d	file:
+SAVE	./par_ops.c	266;"	d	file:
+SAVE	./par_ops.c	272;"	d	file:
+SAVE	./par_ops.c	278;"	d	file:
+SAVE	./par_ops.c	285;"	d	file:
+SAVE	./par_ops.c	291;"	d	file:
+SAVE	./par_ops.c	298;"	d	file:
+SAVE	./par_ops.c	304;"	d	file:
+SAVE	./par_ops.c	311;"	d	file:
+SAVE	./par_ops.c	317;"	d	file:
+SAVE	./par_ops.c	324;"	d	file:
+SAVE	./par_ops.c	330;"	d	file:
+SAVE	./par_ops.c	337;"	d	file:
+SAVE	./par_ops.c	343;"	d	file:
+SAVE	./par_ops.c	350;"	d	file:
+SAVE	./par_ops.c	356;"	d	file:
+SECS	./lib_timing.c	43;"	d	file:
+SEEKPOINTS	./disk.c	17;"	d	file:
+SELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+SHELL	./Makefile	/^SHELL=\/bin\/sh$/;"	m
+SHORT	./bench.h	174;"	d
+SMALLEST_LINE	./bench.h	169;"	d
+SOCKBUF	./bench.h	137;"	d
+SOCKOPT_NONE	./bench.h	134;"	d
+SOCKOPT_PID	./bench.h	132;"	d
+SOCKOPT_RDWR	./bench.h	131;"	d
+SOCKOPT_READ	./bench.h	129;"	d
+SOCKOPT_REUSE	./bench.h	133;"	d
+SOCKOPT_WRITE	./bench.h	130;"	d
+SRC	./lmhttp.c	/^<PRE><IMG SRC="\/icons\/blank.gif" ALT="     "> Name                   Last modified     Size  Description$/;"	v
+SRCS	./Makefile	/^SRCS =  bw_file_rd.c bw_mem.c bw_mmap_rd.c bw_pipe.c bw_tcp.c bw_udp.c	\\$/;"	m
+STATIC_PREFIX	./lat_proc.c	21;"	d	file:
+STATIC_PREFIX	./lat_proc.c	24;"	d	file:
+STRIDE	./lat_mem_rd.c	18;"	d	file:
+STRIDE	./lat_mmap.c	21;"	d	file:
+STRIDE	./seek.c	12;"	d	file:
+SWAP	./cache.c	53;"	d	file:
+S_IEXEC	./bench.h	61;"	d
+S_IREAD	./bench.h	55;"	d
+S_IWRITE	./bench.h	58;"	d
+Start	./lmdd.c	/^uint64	Start, End, Rand, int_count;$/;"	v
+Sync	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+TARGET	./Makefile	/^TARGET=`..\/scripts\/target`$/;"	m
+TCP_CONNECT	./bench.h	108;"	d
+TCP_CONNECT	./bench.h	116;"	d
+TCP_CONTROL	./bench.h	106;"	d
+TCP_CONTROL	./bench.h	114;"	d
+TCP_DATA	./bench.h	107;"	d
+TCP_DATA	./bench.h	115;"	d
+TCP_SELECT	./bench.h	104;"	d
+TCP_SELECT	./bench.h	112;"	d
+TCP_XACT	./bench.h	105;"	d
+TCP_XACT	./bench.h	113;"	d
+TEN	./cache.c	58;"	d	file:
+TEN	./lat_dram_page.c	80;"	d	file:
+TEN	./lat_mem_rd.c	89;"	d	file:
+TEN	./lat_ops.c	38;"	d	file:
+TEN	./lib_mem.c	18;"	d	file:
+TEN	./mhz.c	111;"	d	file:
+TEN	./par_ops.c	18;"	d	file:
+THRESHOLD	./cache.c	55;"	d	file:
+THRESHOLD	./tlb.c	22;"	d	file:
+TIMEOUT	./lat_rpc.c	/^static struct timeval TIMEOUT = { 0, 25000 };$/;"	v	typeref:struct:timeval	file:
+TIME_OPEN2CLOSE	./bench.h	170;"	d
+TOOBIG	./disk.c	127;"	d	file:
+TOOSMALL	./disk.c	126;"	d	file:
+TOO_LONG	./memsize.c	18;"	d	file:
+TRIES	./bench.h	179;"	d
+TRIPS	./lat_ctx.c	19;"	d	file:
+TRUE	./Makefile	/^TRUE=\/bin\/true$/;"	m
+TYPE	./bw_file_rd.c	24;"	d	file:
+TYPE	./bw_mem.c	17;"	d	file:
+TYPE	./bw_mmap_rd.c	26;"	d	file:
+TYPE	./lib_timing.c	/^typedef long TYPE;$/;"	t	file:
+TYPE	./mhz.c	/^typedef	long	TYPE;$/;"	t	file:
+UDP_DATA	./bench.h	110;"	d
+UDP_DATA	./bench.h	118;"	d
+UDP_XACT	./bench.h	109;"	d
+UDP_XACT	./bench.h	117;"	d
+UNIX_CONTROL	./bench.h	122;"	d
+UNIX_DATA	./bench.h	123;"	d
+UNIX_LAT	./bench.h	124;"	d
+USE_VALLOC	./lmdd.c	57;"	d	file:
+USLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+UTILS	./Makefile	/^UTILS=..\/scripts\/target ..\/scripts\/os ..\/scripts\/gnu-os ..\/scripts\/compiler \\$/;"	m
+VALLOC	./lmdd.c	59;"	d	file:
+VALLOC	./lmdd.c	61;"	d	file:
+VERS	./bench.h	119;"	d
+VERSION	./Makefile	/^	VERSION=`..\/scripts\/version`; \\$/;"	m
+WORK_TEN	./lat_pmake.c	161;"	d	file:
+Wtmax	./lmdd.c	/^int	Rtmax, Rtmin, Wtmax, Wtmin;$/;"	v
+Wtmin	./lmdd.c	/^int	Rtmax, Rtmin, Wtmax, Wtmin;$/;"	v
+XACT_PROG	./bench.h	344;"	d
+XACT_VERS	./bench.h	345;"	d
+XFER	./bw_pipe.c	/^int	XFER	= 10*1024*1024;$/;"	v
+XFER	./bw_unix.c	/^size_t	XFER	= 10*1024*1024;$/;"	v
+XFERSIZE	./bench.h	141;"	d
+ZONEPOINTS	./disk.c	18;"	d	file:
+_BENCH_H	./bench.h	5;"	d
+_LIB	./lib_tcp.c	8;"	d	file:
+_LIB	./lib_timing.c	16;"	d	file:
+_LIB	./lib_udp.c	8;"	d	file:
+_LIB	./lib_unix.c	8;"	d	file:
+_LIB_DEBUG_H	./lib_debug.h	2;"	d
+_LIB_UNIX_H_	./lib_unix.h	3;"	d
+_STATS_H	./stats.h	2;"	d
+_TIMING_H	./timing.h	5;"	d
+_benchmp_child_state	./lib_timing.c	/^static benchmp_child_state _benchmp_child_state;$/;"	v	file:
+_results	./lib_timing.c	/^static result_t  _results;$/;"	v	file:
+_state	./bw_file_rd.c	/^typedef struct _state {$/;"	s	file:
+_state	./bw_mem.c	/^typedef struct _state {$/;"	s	file:
+_state	./bw_mmap_rd.c	/^typedef struct _state {$/;"	s	file:
+_state	./bw_pipe.c	/^struct _state {$/;"	s	file:
+_state	./bw_tcp.c	/^typedef struct _state {$/;"	s	file:
+_state	./bw_udp.c	/^typedef struct _state {$/;"	s	file:
+_state	./bw_unix.c	/^struct _state {$/;"	s	file:
+_state	./lat_cmd.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_connect.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_ctx.c	/^struct _state {$/;"	s	file:
+_state	./lat_fcntl.c	/^struct _state {$/;"	s	file:
+_state	./lat_fifo.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_fs.c	/^struct _state {$/;"	s	file:
+_state	./lat_mmap.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_ops.c	/^struct _state {$/;"	s	file:
+_state	./lat_pagefault.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_pipe.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_pmake.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_select.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_sem.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_sig.c	/^struct _state {$/;"	s	file:
+_state	./lat_syscall.c	/^struct _state {$/;"	s	file:
+_state	./lat_tcp.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_udp.c	/^typedef struct _state {$/;"	s	file:
+_state	./lat_unix.c	/^struct _state {$/;"	s	file:
+_state	./lat_usleep.c	/^typedef struct _state {$/;"	s	file:
+_state	./par_ops.c	/^struct _state {$/;"	s	file:
+_state	./stream.c	/^struct _state {$/;"	s	file:
+a	./stream.c	/^	double*	a;$/;"	m	struct:_state	file:
+add	./stream.c	/^add(iter_t iterations, void *cookie)$/;"	f
+addr	./lib_mem.h	/^	char*	addr;	\/* raw pointer returned by malloc *\/$/;"	m	struct:mem_state
+addr_save	./cache.c	/^static char **addr_save = NULL;$/;"	v	file:
+adj	./lat_sig.c	/^double	adj;$/;"	v
+adjusted_bandwidth	./bw_mem.c	/^void adjusted_bandwidth(uint64 time, uint64 bytes, uint64 iter, double overhd)$/;"	f
+alarm_triggered	./memsize.c	/^int	alarm_triggered = 0;$/;"	v
+aligned	./bw_mem.c	/^	int	aligned;$/;"	m	struct:_state	file:
+argv	./lat_cmd.c	/^	char**	argv;$/;"	m	struct:_state	file:
+awrite	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+b	./stream.c	/^	double*	b;$/;"	m	struct:_state	file:
+bandwidth	./lib_timing.c	/^bandwidth(uint64 bytes, uint64 times, int verbose)$/;"	f
+base	./lib_mem.h	/^	char*	base;	\/* page-aligned pointer *\/$/;"	m	struct:mem_state
+base_initialize	./lib_mem.c	/^base_initialize(iter_t iterations, void* cookie)$/;"	f
+bcopy	./bench.h	146;"	d
+been_there	./lmdd.c	/^been_there(uint64 off)$/;"	f
+bench	./lat_cmd.c	/^bench(register iter_t iterations, void *cookie)$/;"	f
+bench	./lat_pmake.c	/^bench(register iter_t iterations, void *cookie)$/;"	f
+bench_catch	./lat_sig.c	/^bench_catch(int parallel, int warmup, int repetitions)$/;"	f
+bench_drand48	./lat_rand.c	/^bench_drand48(register iter_t iterations, void *cookie)$/;"	f
+bench_itimer	./lat_usleep.c	/^bench_itimer(iter_t iterations, void *cookie)$/;"	f
+bench_lrand48	./lat_rand.c	/^bench_lrand48(register iter_t iterations, void *cookie)$/;"	f
+bench_nanosleep	./lat_usleep.c	/^bench_nanosleep(iter_t iterations, void *cookie)$/;"	f
+bench_prot	./lat_sig.c	/^bench_prot(char* fname, int parallel, int warmup, int repetitions)$/;"	f
+bench_pselect	./lat_usleep.c	/^bench_pselect(iter_t iterations, void *cookie)$/;"	f
+bench_rand	./lat_rand.c	/^bench_rand(register iter_t iterations, void *cookie)$/;"	f
+bench_random	./lat_rand.c	/^bench_random(register iter_t iterations, void *cookie)$/;"	f
+bench_select	./lat_usleep.c	/^bench_select(iter_t iterations, void *cookie)$/;"	f
+bench_usleep	./lat_usleep.c	/^bench_usleep(iter_t iterations, void *cookie)$/;"	f
+benchmark	./lat_ctx.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
+benchmark	./lat_fcntl.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
+benchmark	./lat_pagefault.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
+benchmark	./lat_rpc.c	/^benchmark(iter_t iterations, void* _state)$/;"	f
+benchmark	./lat_unix.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
+benchmark	./lat_unix_connect.c	/^void benchmark(iter_t iterations, void* cookie)$/;"	f
+benchmark	./lib_timing.c	/^	benchmp_f	benchmark;$/;"	m	struct:__anon5	file:
+benchmark_loads	./lat_dram_page.c	/^benchmark_loads(iter_t iterations, void *cookie)$/;"	f
+benchmark_loads	./lat_mem_rd.c	/^benchmark_loads(iter_t iterations, void *cookie)$/;"	f
+benchmark_mk	./lat_fs.c	/^benchmark_mk(iter_t iterations, void* cookie)$/;"	f
+benchmark_mmap	./lat_pagefault.c	/^benchmark_mmap(iter_t iterations, void* cookie)$/;"	f
+benchmark_overhead	./lat_ctx.c	/^benchmark_overhead(iter_t iterations, void* cookie)$/;"	f
+benchmark_rm	./lat_fs.c	/^benchmark_rm(iter_t iterations, void* cookie)$/;"	f
+benchmp	./lib_timing.c	/^benchmp(benchmp_f initialize, $/;"	f
+benchmp_child	./lib_timing.c	/^benchmp_child(benchmp_f initialize, $/;"	f
+benchmp_child_sigchld	./lib_timing.c	/^benchmp_child_sigchld(int signo)$/;"	f
+benchmp_child_sigterm	./lib_timing.c	/^benchmp_child_sigterm(int signo)$/;"	f
+benchmp_child_state	./lib_timing.c	/^} benchmp_child_state;$/;"	t	typeref:struct:__anon5	file:
+benchmp_childid	./lib_timing.c	/^benchmp_childid()$/;"	f
+benchmp_f	./bench.h	/^typedef void (*benchmp_f)(iter_t iterations, void* cookie);$/;"	t
+benchmp_getstate	./lib_timing.c	/^benchmp_getstate()$/;"	f
+benchmp_interval	./lib_timing.c	/^benchmp_interval(void* _state)$/;"	f
+benchmp_parent	./lib_timing.c	/^benchmp_parent(	int response, $/;"	f
+benchmp_sigalrm	./lib_timing.c	/^benchmp_sigalrm(int signo)$/;"	f
+benchmp_sigalrm_handler	./lib_timing.c	/^void (*benchmp_sigalrm_handler)(int);$/;"	v
+benchmp_sigalrm_pid	./lib_timing.c	/^static pid_t	benchmp_sigalrm_pid;$/;"	v	file:
+benchmp_sigalrm_timeout	./lib_timing.c	/^static int	benchmp_sigalrm_timeout;$/;"	v	file:
+benchmp_sigchld	./lib_timing.c	/^benchmp_sigchld(int signo)$/;"	f
+benchmp_sigchld_handler	./lib_timing.c	/^void (*benchmp_sigchld_handler)(int);$/;"	v
+benchmp_sigchld_received	./lib_timing.c	/^static int	benchmp_sigchld_received;$/;"	v	file:
+benchmp_sigterm	./lib_timing.c	/^benchmp_sigterm(int signo)$/;"	f
+benchmp_sigterm_handler	./lib_timing.c	/^void (*benchmp_sigterm_handler)(int);$/;"	v
+benchmp_sigterm_received	./lib_timing.c	/^static int	benchmp_sigterm_received;$/;"	v	file:
+benchmp_state	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	t	typeref:enum:__anon4	file:
+bool_t	./bench.h	/^typedef unsigned char bool_t;$/;"	t
+bread	./lib_timing.c	/^bread(void* buf, long nbytes)$/;"	f
+buf	./bw_file_rd.c	/^void	*buf;		\/* do the I\/O here *\/$/;"	v
+buf	./bw_mem.c	/^	TYPE	*buf;$/;"	m	struct:_state	file:
+buf	./bw_mmap_rd.c	/^	void	*buf;$/;"	m	struct:_state	file:
+buf	./bw_pipe.c	/^	char	*buf;	\/* buffer memory space *\/$/;"	m	struct:_state	file:
+buf	./bw_tcp.c	/^	char	*buf;$/;"	m	struct:_state	file:
+buf	./bw_udp.c	/^	char	*buf;$/;"	m	struct:_state	file:
+buf	./bw_unix.c	/^	char	*buf;	\/* buffer memory space *\/$/;"	m	struct:_state	file:
+buf	./lat_http.c	/^char	*buf;$/;"	v
+buf	./lat_tcp.c	/^	char	*buf;$/;"	m	struct:_state	file:
+buf	./lat_udp.c	/^	char	*buf;$/;"	m	struct:_state	file:
+buf	./lat_unix.c	/^	char*	buf;$/;"	m	struct:_state	file:
+buf	./lmhttp.c	/^char	*buf;$/;"	v
+buf2	./bw_mem.c	/^	TYPE	*buf2;$/;"	m	struct:_state	file:
+buf2_orig	./bw_mem.c	/^	TYPE	*buf2_orig;$/;"	m	struct:_state	file:
+bufs	./lmhttp.c	/^char	*bufs[3];$/;"	v
+bw_quartile	./lib_debug.c	/^bw_quartile(uint64 bytes)$/;"	f
+bytes	./bw_pipe.c	/^	size_t	bytes;	\/* bytes to read\/write in one iteration *\/$/;"	m	struct:_state	file:
+bytes	./bw_unix.c	/^	size_t	bytes;	\/* bytes to read\/write in one iteration *\/$/;"	m	struct:_state	file:
+bytes	./lib_timing.c	/^bytes(char *s)$/;"	f
+bzero	./bench.h	145;"	d
+c	./stream.c	/^	double*	c;$/;"	m	struct:_state	file:
+cache_results	./cache.c	/^struct cache_results {$/;"	s	file:
+caught	./lat_sig.c	/^uint64	caught, n;$/;"	v
+caught	./lat_usleep.c	/^uint64          caught,$/;"	v
+check_mem	./lib_debug.c	/^check_mem(char* addr, size_t size)$/;"	f
+check_memory	./cache.c	/^check_memory(size_t size, struct mem_state* state)$/;"	f
+child_pid	./lat_proc.c	/^pid_t child_pid;$/;"	v
+childid	./lib_timing.c	/^	int		childid;$/;"	m	struct:__anon5	file:
+chkarg	./lmdd.c	/^chkarg(char *arg)$/;"	f
+chop	./lat_http.c	/^void chop(register char *s) { while (*s && *s != '\\n') s++; *s = 0; }$/;"	f
+cl	./lat_rpc.c	/^	CLIENT	*cl;$/;"	m	struct:state_	file:
+classes	./mhz.c	/^classes(double values[], int size)$/;"	f
+cleanup	./bw_file_rd.c	/^cleanup(iter_t iterations, void * cookie)$/;"	f
+cleanup	./bw_mem.c	/^cleanup(iter_t iterations, void *cookie)$/;"	f
+cleanup	./bw_mmap_rd.c	/^cleanup(iter_t iterations, void *cookie)$/;"	f
+cleanup	./bw_pipe.c	/^cleanup(iter_t iterations, void * cookie)$/;"	f
+cleanup	./bw_tcp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./bw_udp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./bw_unix.c	/^cleanup(iter_t iterations, void*  cookie)$/;"	f
+cleanup	./lat_cmd.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_ctx.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_fcntl.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_fifo.c	/^cleanup(iter_t iterations, void * cookie)$/;"	f
+cleanup	./lat_mmap.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_ops.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_pagefault.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_pipe.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_pmake.c	/^cleanup(register iter_t iterations, void *cookie)$/;"	f
+cleanup	./lat_proc.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_select.c	/^cleanup(iter_t iterations, void *cookie)$/;"	f
+cleanup	./lat_sem.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_tcp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_udp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lat_unix.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup	./lib_timing.c	/^	benchmp_f	cleanup;$/;"	m	struct:__anon5	file:
+cleanup	./stream.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
+cleanup_mk	./lat_fs.c	/^cleanup_mk(iter_t iterations, void* cookie)$/;"	f
+cleanup_names	./lat_fs.c	/^cleanup_names(iter_t iterations, void* cookie)$/;"	f
+cleanup_overhead	./lat_ctx.c	/^cleanup_overhead(iter_t iterations, void* cookie)$/;"	f
+clear_alarm	./memsize.c	/^clear_alarm()$/;"	f
+client_rpc_xact_1	./lat_rpc.c	/^client_rpc_xact_1(char *argp, CLIENT *clnt)$/;"	f
+clone	./bw_file_rd.c	/^	int clone;$/;"	m	struct:_state	file:
+clone	./bw_mmap_rd.c	/^	int	clone;$/;"	m	struct:_state	file:
+clone	./lat_mmap.c	/^	int	clone;$/;"	m	struct:_state	file:
+clone	./lat_pagefault.c	/^	int clone;$/;"	m	struct:_state	file:
+cmds	./lmdd.c	/^char   *cmds[] = {$/;"	v
+collect_data	./cache.c	/^collect_data(size_t start, size_t line, size_t maxlen, $/;"	f
+collect_sample	./cache.c	/^collect_sample(int repetitions, struct mem_state* state, $/;"	f
+compute_enough	./lib_timing.c	/^compute_enough()$/;"	f	file:
+compute_mhz	./mhz.c	/^compute_mhz(result_t *r)$/;"	f
+compute_times	./tlb.c	/^compute_times(int pages, int warmup, int repetitions,$/;"	f
+context	./lib_timing.c	/^context(uint64 xfers)$/;"	f
+control	./bw_unix.c	/^	int	control[2];$/;"	m	struct:_state	file:
+cookie	./lib_timing.c	/^	void*		cookie;$/;"	m	struct:__anon5	file:
+cooldown	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+copy	./stream.c	/^copy(iter_t iterations, void *cookie)$/;"	f
+count	./bw_file_rd.c	/^size_t	count;		\/* bytes to move (can't be modified) *\/$/;"	v
+cp	./lib_timing.c	/^cp(char* src, char* dst, mode_t mode)$/;"	f
+create_daemons	./lat_ctx.c	/^create_daemons(int **p, pid_t *pids, int procs, int process_size)$/;"	f
+create_pipes	./lat_ctx.c	/^create_pipes(int **p, int procs)$/;"	f
+cross_values	./mhz.c	/^cross_values(double values[], int size, double **cvalues, int *csize)$/;"	f
+custom	./lib_sched.c	/^custom(char* str, int cpu)$/;"	f
+data	./lat_ctx.c	/^	void*	data;$/;"	m	struct:_state	file:
+data	./lat_ops.c	/^	double*	data;$/;"	m	struct:_state	file:
+data	./lmhttp.c	/^int	data, logfile;$/;"	v
+date	./lmhttp.c	/^date(time_t	*tt)$/;"	f
+daxpy	./stream.c	/^daxpy(iter_t iterations, void *cookie)$/;"	f
+debug	./bench.h	101;"	d
+debug	./bench.h	99;"	d
+debug	./lat_http.c	/^int	debug;$/;"	v
+delta	./lib_timing.c	/^delta(void)$/;"	f
+dflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+die	./lmhttp.c	/^void die()$/;"	f
+dirs	./lat_fs.c	/^	char**	dirs;$/;"	m	struct:_state	file:
+disksize	./disk.c	/^disksize(char *disk)$/;"	f
+do_catch	./lat_sig.c	/^do_catch(iter_t iterations, void* cookie)$/;"	f
+do_double_add	./lat_ops.c	/^do_double_add(iter_t iterations, void* cookie)$/;"	f
+do_double_bogomflops	./lat_ops.c	/^do_double_bogomflops(iter_t iterations, void* cookie)$/;"	f
+do_double_div	./lat_ops.c	/^do_double_div(iter_t iterations, void* cookie)$/;"	f
+do_double_mul	./lat_ops.c	/^do_double_mul(iter_t iterations, void* cookie)$/;"	f
+do_float_add	./lat_ops.c	/^do_float_add(iter_t iterations, void* cookie)$/;"	f
+do_float_bogomflops	./lat_ops.c	/^do_float_bogomflops(iter_t iterations, void* cookie)$/;"	f
+do_float_div	./lat_ops.c	/^do_float_div(iter_t iterations, void* cookie)$/;"	f
+do_float_mul	./lat_ops.c	/^do_float_mul(iter_t iterations, void* cookie)$/;"	f
+do_fork	./lat_proc.c	/^do_fork(iter_t iterations, void* cookie)$/;"	f
+do_forkexec	./lat_proc.c	/^do_forkexec(iter_t iterations, void* cookie)$/;"	f
+do_fstat	./lat_syscall.c	/^do_fstat(iter_t iterations, void *cookie)$/;"	f
+do_getppid	./lat_syscall.c	/^do_getppid(iter_t iterations, void *cookie)$/;"	f
+do_install	./lat_sig.c	/^do_install(iter_t iterations, void* cookie)$/;"	f
+do_int64_add	./lat_ops.c	/^do_int64_add(iter_t iterations, void* cookie)$/;"	f
+do_int64_bitwise	./lat_ops.c	/^do_int64_bitwise(iter_t iterations, void* cookie)$/;"	f
+do_int64_div	./lat_ops.c	/^do_int64_div(iter_t iterations, void* cookie)$/;"	f
+do_int64_mod	./lat_ops.c	/^do_int64_mod(iter_t iterations, void* cookie)$/;"	f
+do_int64_mul	./lat_ops.c	/^do_int64_mul(iter_t iterations, void* cookie)$/;"	f
+do_integer_add	./lat_ops.c	/^do_integer_add(iter_t iterations, void* cookie)$/;"	f
+do_integer_bitwise	./lat_ops.c	/^do_integer_bitwise(iter_t iterations, void* cookie)$/;"	f
+do_integer_div	./lat_ops.c	/^do_integer_div(iter_t iterations, void* cookie)$/;"	f
+do_integer_mod	./lat_ops.c	/^do_integer_mod(iter_t iterations, void* cookie)$/;"	f
+do_integer_mul	./lat_ops.c	/^do_integer_mul(iter_t iterations, void* cookie)$/;"	f
+do_openclose	./lat_syscall.c	/^do_openclose(iter_t iterations, void *cookie)$/;"	f
+do_procedure	./lat_proc.c	/^do_procedure(iter_t iterations, void* cookie)$/;"	f
+do_prot	./lat_sig.c	/^do_prot(iter_t iterations, void* cookie)$/;"	f
+do_read	./lat_syscall.c	/^do_read(iter_t iterations, void *cookie)$/;"	f
+do_send	./lat_sig.c	/^do_send(iter_t iterations, void* cookie)$/;"	f
+do_shell	./lat_proc.c	/^do_shell(iter_t iterations, void* cookie)$/;"	f
+do_stat	./lat_syscall.c	/^do_stat(iter_t iterations, void *cookie)$/;"	f
+do_write	./lat_syscall.c	/^do_write(iter_t iterations, void *cookie)$/;"	f
+doclient	./lat_connect.c	/^doclient(iter_t iterations, void *cookie)$/;"	f
+doclient	./lat_tcp.c	/^doclient(iter_t iterations, void* cookie)$/;"	f
+doit	./bw_file_rd.c	/^void doit(int fd)$/;"	f
+doit	./lat_ctx.c	/^doit(int rd, int wr, int process_size)$/;"	f
+doit	./lat_fifo.c	/^doit(register iter_t iterations, void *cookie)$/;"	f
+doit	./lat_pipe.c	/^doit(register iter_t iterations, void *cookie)$/;"	f
+doit	./lat_rpc.c	/^doit(CLIENT *cl, char *server)$/;"	f
+doit	./lat_select.c	/^doit(iter_t iterations, void * cookie)$/;"	f
+doit	./lat_sem.c	/^doit(register iter_t iterations, void *cookie)$/;"	f
+doit	./lat_udp.c	/^doit(iter_t iterations, void *cookie)$/;"	f
+domapping	./lat_mmap.c	/^domapping(iter_t iterations, void *cookie)$/;"	f
+done	./lmdd.c	/^done(void)$/;"	f
+doserver	./lat_tcp.c	/^doserver(int sock)$/;"	f
+double_bootstrap_stderr	./lib_stats.c	/^double	double_bootstrap_stderr(double *values, int size, double_stat f)$/;"	f
+double_compare	./lib_stats.c	/^double_compare(const void *a, const void *b)$/;"	f
+double_data	./par_ops.c	/^	double	double_data[MAX_LOAD_PARALLELISM];$/;"	m	struct:_state	file:
+double_initialize	./lat_ops.c	/^double_initialize(iter_t iterations, void* cookie)$/;"	f
+double_kurtosis	./lib_stats.c	/^double	double_kurtosis(double *values, int size)$/;"	f
+double_max	./lib_stats.c	/^double_max(double *values, int size)$/;"	f
+double_mean	./lib_stats.c	/^double_mean(double *values, int size)$/;"	f
+double_median	./lib_stats.c	/^double_median(double *values, int size)$/;"	f
+double_min	./lib_stats.c	/^double_min(double *values, int size)$/;"	f
+double_moment	./lib_stats.c	/^double	double_moment(int moment, double *values, int size)$/;"	f
+double_skew	./lib_stats.c	/^double	double_skew(double *values, int size)$/;"	f
+double_stat	./stats.h	/^typedef	double (*double_stat)(double *values, int size);$/;"	t
+double_stderr	./lib_stats.c	/^double	double_stderr(double *values, int size)$/;"	f
+double_variance	./lib_stats.c	/^double	double_variance(double *values, int size)$/;"	f
+dram_page_initialize	./lat_dram_page.c	/^dram_page_initialize(iter_t iterations, void* cookie)$/;"	f
+dram_page_state	./lat_dram_page.c	/^struct dram_page_state$/;"	s	file:
+drand48	./bench.h	156;"	d
+drand48	./bench.h	159;"	d
+duration	./lib_timing.c	/^duration(long N)$/;"	f	file:
+echo	./lat_http.c	/^int	echo;$/;"	v
+enough	./lib_timing.c	/^	int		enough;$/;"	m	struct:__anon5	file:
+enough_duration	./lib_timing.c	/^enough_duration(register long N, register TYPE ** p)$/;"	f	file:
+error	./lmdd.c	/^error(char *s)$/;"	f
+exit_signal	./lib_timing.c	/^	int		exit_signal;$/;"	m	struct:__anon5	file:
+fcp	./bw_mem.c	/^fcp(iter_t iterations, void *cookie)$/;"	f
+fd	./bw_file_rd.c	/^	int fd;$/;"	m	struct:_state	file:
+fd	./bw_mmap_rd.c	/^	int	fd;$/;"	m	struct:_state	file:
+fd	./bw_tcp.c	/^	int	fd;$/;"	m	struct:_state	file:
+fd	./bw_udp.c	/^	int	fd;$/;"	m	struct:_state	file:
+fd	./lat_mmap.c	/^	int	fd;$/;"	m	struct:_state	file:
+fd	./lat_pagefault.c	/^	int fd;$/;"	m	struct:_state	file:
+fd	./lat_syscall.c	/^	int fd;$/;"	m	struct:_state	file:
+fd1	./lat_fcntl.c	/^	int	fd1;$/;"	m	struct:_state	file:
+fd2	./lat_fcntl.c	/^	int	fd2;$/;"	m	struct:_state	file:
+fflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+fid	./lat_select.c	/^	int	fid;$/;"	m	struct:_state	file:
+fid_f	./lat_select.c	/^	open_f	fid_f;$/;"	m	struct:_state	file:
+file	./lat_pagefault.c	/^	char* file;$/;"	m	struct:_state	file:
+file	./lat_syscall.c	/^	char* file;$/;"	m	struct:_state	file:
+filename	./bw_file_rd.c	/^	char filename[256];$/;"	m	struct:_state	file:
+filename	./bw_mmap_rd.c	/^	char	filename[256];$/;"	m	struct:_state	file:
+filename1	./lat_fcntl.c	/^	char filename1[2048];$/;"	m	struct:_state	file:
+filename1	./lat_fifo.c	/^	char	filename1[256];$/;"	m	struct:_state	file:
+filename2	./lat_fcntl.c	/^	char filename2[2048];$/;"	m	struct:_state	file:
+filename2	./lat_fifo.c	/^	char	filename2[256];$/;"	m	struct:_state	file:
+fill	./stream.c	/^fill(iter_t iterations, void *cookie)$/;"	f
+filter_data	./mhz.c	/^filter_data(double values[], int size)$/;"	f
+find_N	./lib_timing.c	/^find_N(int enough)$/;"	f	file:
+find_cache	./cache.c	/^find_cache(int start, int n, double prev_lat, struct cache_results* p)$/;"	f
+find_tlb	./tlb.c	/^find_tlb(int start, int maxpages, int warmup, int repetitions,$/;"	f
+fixup_chunk	./cache.c	/^fixup_chunk(size_t i, size_t chunk, size_t npages, size_t* pages, $/;"	f
+float_initialize	./lat_ops.c	/^float_initialize(iter_t iterations, void* cookie)$/;"	f
+flush	./lmdd.c	/^flush(void)$/;"	f
+flushdisk	./flushdisk.c	/^flushdisk(int fd)$/;"	f
+fname	./lat_select.c	/^	char	fname[L_tmpnam];$/;"	m	struct:_state	file:
+fname	./lat_sig.c	/^	char*	fname;$/;"	m	struct:_state	file:
+fpInit	./lat_mem_rd.c	/^benchmp_f	fpInit = stride_initialize;$/;"	v
+frd	./bw_mem.c	/^frd(iter_t iterations, void *cookie)$/;"	f
+ftiming	./lib_timing.c	/^FILE			*ftiming;$/;"	v
+fwr	./bw_mem.c	/^fwr(iter_t iterations, void *cookie)$/;"	f
+gcd	./mhz.c	/^gcd(double values[], int size)$/;"	f
+getFILETIMEoffset	./lib_timing.c	/^getFILETIMEoffset()$/;"	f
+get_enough	./lib_timing.c	/^get_enough(int e)$/;"	f
+get_n	./lib_timing.c	/^get_n(void)$/;"	f
+get_results	./lib_timing.c	/^get_results()$/;"	f
+getarg	./lmdd.c	/^getarg(char *s, int ac, char **av)$/;"	f
+getfile	./lmdd.c	/^getfile(char *s, int ac, char **av)$/;"	f
+getopt	./bench.h	277;"	d
+getopt	./getopt.c	/^getopt(int ac, char **av, char *opts)$/;"	f
+getpagesize	./lib_timing.c	/^getpagesize()$/;"	f
+getpid	./bench.h	165;"	d
+gettime	./bench.h	149;"	d
+gettime	./lib_timing.c	/^gettime(void)$/;"	f
+gettimeofday	./lib_timing.c	/^gettimeofday(struct timeval *tv, struct timezone *tz)$/;"	f
+gotalarm	./memsize.c	/^gotalarm(int s)$/;"	f
+group	./lat_dram_page.c	/^	int			group;$/;"	m	struct:dram_page_state	file:
+handle_scheduler	./lib_sched.c	/^handle_scheduler(int childno, int benchproc, int nbenchprocs)$/;"	f
+handler	./lat_sig.c	/^void	handler(int s) { }$/;"	f
+hash	./lmdd.c	/^int	hash;$/;"	v
+http	./lat_http.c	/^http(char *server, char *file, int prog)$/;"	f
+http_time	./lmhttp.c	/^char	*http_time()$/;"	f
+i	./busy.c	/^volatile int i;$/;"	v
+i	./lib_timing.c	/^	long		i;$/;"	m	struct:__anon5	file:
+id	./bw_file_rd.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./bw_mem.c	/^char	*id = "$Id$";$/;"	v
+id	./bw_mmap_rd.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./bw_pipe.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./bw_tcp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./bw_udp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./bw_unix.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./cache.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./clock.c	/^char	*id = "$Id$";$/;"	v
+id	./getopt.c	/^static char *id = "%@%";$/;"	v	file:
+id	./lat_cmd.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_connect.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_ctx.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_dram_page.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_fcntl.c	/^char	*id = "$Id: lat_pipe.c,v 1.8 1997\/06\/16 05:38:58 lm Exp $\\n";$/;"	v
+id	./lat_fifo.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_fs.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_http.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_mem_rd.c	/^char	*id = "$Id: s.lat_mem_rd.c 1.13 98\/06\/30 16:13:49-07:00 lm@lm.bitmover.com $\\n";$/;"	v
+id	./lat_mmap.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_ops.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_pagefault.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_pipe.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_pmake.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_proc.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_rand.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_rpc.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_select.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_sem.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_sig.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_syscall.c	/^char	*id = "$Id: s.lat_syscall.c 1.11 97\/06\/15 22:38:58-07:00 lm $\\n";$/;"	v
+id	./lat_tcp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_udp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_unix.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_unix_connect.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lat_usleep.c	/^char           *id = "$Id$\\n";$/;"	v
+id	./line.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./lmdd.c	/^char	*id = "$Id: lmdd.c,v 1.23 1997\/12\/01 23:47:59 lm Exp $\\n";$/;"	v
+id	./lmhttp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./memsize.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./mhz.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./par_mem.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./par_ops.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./rhttp.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./seek.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./stream.c	/^char	*id = "$Id$\\n";$/;"	v
+id	./tlb.c	/^char	*id = "$Id$\\n";$/;"	v
+init	./bw_udp.c	/^init(iter_t iterations, void* cookie)$/;"	f
+init	./lat_mmap.c	/^init(iter_t iterations, void* cookie)$/;"	f
+init	./lat_tcp.c	/^init(iter_t iterations, void* cookie)$/;"	f
+init	./lat_udp.c	/^init(iter_t iterations, void* cookie)$/;"	f
+init_loop	./bw_mem.c	/^init_loop(iter_t iterations, void *cookie)$/;"	f
+init_open	./bw_file_rd.c	/^init_open(iter_t iterations, void * cookie)$/;"	f
+init_open	./bw_mmap_rd.c	/^init_open(iter_t iterations, void *cookie)$/;"	f
+init_overhead	./bw_mem.c	/^init_overhead(iter_t iterations, void *cookie)$/;"	f
+init_timing	./lib_timing.c	/^init_timing(void)$/;"	f	file:
+initerr	./bw_unix.c	/^	int	initerr;$/;"	m	struct:_state	file:
+initialize	./bw_file_rd.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./bw_mmap_rd.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./bw_pipe.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
+initialize	./bw_tcp.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
+initialize	./bw_unix.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_ctx.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_fcntl.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_fifo.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
+initialize	./lat_pagefault.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_pipe.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_rpc.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_select.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
+initialize	./lat_sem.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_sig.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_unix.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize	./lat_usleep.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
+initialize	./lib_timing.c	/^	benchmp_f	initialize;$/;"	m	struct:__anon5	file:
+initialize	./stream.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
+initialize_overhead	./lat_ctx.c	/^initialize_overhead(iter_t iterations, void* cookie)$/;"	f
+initialized	./lib_mem.h	/^	int	initialized;$/;"	m	struct:mem_state
+insertinit	./lib_timing.c	/^insertinit(result_t *r)$/;"	f
+insertsort	./lib_timing.c	/^insertsort(uint64 u, uint64 n, result_t *r)$/;"	f
+int64	./bench.h	/^typedef int64_t int64;$/;"	t
+int64	./bench.h	/^typedef long long int64;$/;"	t
+int_bootstrap_stderr	./lib_stats.c	/^double	int_bootstrap_stderr(int *values, int size, int_stat f)$/;"	f
+int_compare	./lib_stats.c	/^int_compare(const void *a, const void *b)$/;"	f
+int_count	./lmdd.c	/^uint64	Start, End, Rand, int_count;$/;"	v
+int_data	./par_ops.c	/^	int	int_data[MAX_LOAD_PARALLELISM];$/;"	m	struct:_state	file:
+int_kurtosis	./lib_stats.c	/^double	int_kurtosis(int *values, int size)$/;"	f
+int_max	./lib_stats.c	/^int_max(int *values, int size)$/;"	f
+int_mean	./lib_stats.c	/^int_mean(int *values, int size)$/;"	f
+int_median	./lib_stats.c	/^int_median(int *values, int size)$/;"	f
+int_min	./lib_stats.c	/^int_min(int *values, int size)$/;"	f
+int_moment	./lib_stats.c	/^double	int_moment(int moment, int *values, int size)$/;"	f
+int_skew	./lib_stats.c	/^double	int_skew(int *values, int size)$/;"	f
+int_stat	./stats.h	/^typedef	int (*int_stat)(int *values, int size);$/;"	t
+int_stderr	./lib_stats.c	/^double	int_stderr(int *values, int size)$/;"	f
+int_variance	./lib_stats.c	/^double	int_variance(int *values, int size)$/;"	f
+interval	./lat_usleep.c	/^interval(int x)$/;"	f
+isdir	./lmhttp.c	/^isdir(char *name)$/;"	f
+iter_t	./bench.h	/^typedef u_long iter_t;$/;"	t
+iterations	./lat_pmake.c	/^	iter_t	iterations;	\/* how long each job should work *\/$/;"	m	struct:_state	file:
+iterations	./lib_timing.c	/^        iter_t		iterations;$/;"	m	struct:__anon5	file:
+iterations	./lib_timing.c	/^static		uint64	iterations;$/;"	v	file:
+iterations_batch	./lib_timing.c	/^	iter_t		iterations_batch;$/;"	m	struct:__anon5	file:
+jobs	./lat_pmake.c	/^	int	jobs;		\/* number of jobs to create *\/$/;"	m	struct:_state	file:
+kb	./lib_timing.c	/^kb(uint64 bytes)$/;"	f
+killhttp	./lat_http.c	/^killhttp(char *server, int prog)$/;"	f
+l_overhead	./lib_timing.c	/^l_overhead(void)$/;"	f
+last	./lib_timing.c	/^last(char *s)$/;"	f
+lastone	./bw_mem.c	/^	TYPE	*lastone;$/;"	m	struct:_state	file:
+latency	./cache.c	/^	double	latency;$/;"	m	struct:cache_results	file:
+latency	./lib_timing.c	/^latency(uint64 xfers, uint64 size)$/;"	f
+len	./cache.c	/^	size_t	len;$/;"	m	struct:cache_results	file:
+len	./lib_mem.h	/^	size_t	len;$/;"	m	struct:mem_state
+len	./stream.c	/^	int	len;$/;"	m	struct:_state	file:
+lflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+line	./cache.c	/^	size_t	line;$/;"	m	struct:cache_results	file:
+line	./lib_mem.h	/^	size_t	line;$/;"	m	struct:mem_state
+line_find	./lib_mem.c	/^line_find(size_t len, int warmup, int repetitions, struct mem_state* state)$/;"	f
+line_initialize	./lib_mem.c	/^line_initialize(iter_t iterations, void* cookie)$/;"	f
+line_test	./lib_mem.c	/^line_test(size_t line, int warmup, int repetitions, struct mem_state* state)$/;"	f
+lines	./lib_mem.h	/^	size_t*	lines;$/;"	m	struct:mem_state
+lmbench_usage	./lib_timing.c	/^lmbench_usage(int argc, char *argv[], char* usage)$/;"	f
+loads	./lat_dram_page.c	/^loads(benchmp_f initialize, int len, int warmup, int repetitions, void* cookie)$/;"	f
+loads	./lat_mem_rd.c	/^loads(size_t len, size_t range, size_t stride, $/;"	f
+lock	./lat_fcntl.c	/^struct	flock lock, unlock;$/;"	v	typeref:struct:flock
+logfile	./lmhttp.c	/^int	data, logfile;$/;"	v
+logit	./lmhttp.c	/^logit(int sock, char *name, int size)$/;"	f
+long_enough	./lib_timing.c	/^static	int	long_enough;$/;"	v	file:
+loop_bcopy	./bw_mem.c	/^loop_bcopy(iter_t iterations, void *cookie)$/;"	f
+loop_bzero	./bw_mem.c	/^loop_bzero(iter_t iterations, void *cookie)$/;"	f
+loop_f	./mhz.c	/^typedef void (*loop_f)(int);$/;"	t	file:
+loop_transfer	./bw_tcp.c	/^loop_transfer(iter_t iterations, void *cookie)$/;"	f
+loop_transfer	./bw_udp.c	/^loop_transfer(iter_t iterations, void *cookie)$/;"	f
+loops	./mhz.c	/^loop_f loops[] = {$/;"	v
+m1	./lmdd.c	/^	bds_msg	*m1, *m2;$/;"	v
+m2	./lmdd.c	/^	bds_msg	*m1, *m2;$/;"	v
+main	./busy.c	/^main()$/;"	f
+main	./bw_file_rd.c	/^main(int ac, char **av)$/;"	f
+main	./bw_mem.c	/^main(int ac, char **av)$/;"	f
+main	./bw_mmap_rd.c	/^main(int ac, char **av)$/;"	f
+main	./bw_pipe.c	/^main(int ac, char *av[])$/;"	f
+main	./bw_tcp.c	/^main(int ac, char **av)$/;"	f
+main	./bw_udp.c	/^main(int ac, char **av)$/;"	f
+main	./bw_unix.c	/^main(int argc, char *argv[])$/;"	f
+main	./cache.c	/^main(int ac, char **av)$/;"	f
+main	./clock.c	/^main()$/;"	f
+main	./disk.c	/^main(int ac, char **av)$/;"	f
+main	./enough.c	/^main()$/;"	f
+main	./flushdisk.c	/^main(int ac, char **av)$/;"	f
+main	./getopt.c	/^main(int ac, char **av)$/;"	f
+main	./hello.c	/^main()$/;"	f
+main	./lat_cmd.c	/^main(int ac, char **av)$/;"	f
+main	./lat_connect.c	/^main(int ac, char **av)$/;"	f
+main	./lat_ctx.c	/^main(int ac, char **av)$/;"	f
+main	./lat_dram_page.c	/^main(int ac, char **av)$/;"	f
+main	./lat_fcntl.c	/^main(int ac, char **av)$/;"	f
+main	./lat_fifo.c	/^main(int ac, char **av)$/;"	f
+main	./lat_fs.c	/^main(int ac, char **av)$/;"	f
+main	./lat_http.c	/^main(int ac, char **av)$/;"	f
+main	./lat_mem_rd.c	/^main(int ac, char **av)$/;"	f
+main	./lat_mmap.c	/^main(int ac, char **av)$/;"	f
+main	./lat_ops.c	/^main(int ac, char **av)$/;"	f
+main	./lat_pagefault.c	/^main(int ac, char **av)$/;"	f
+main	./lat_pipe.c	/^main(int ac, char **av)$/;"	f
+main	./lat_pmake.c	/^main(int ac, char **av)$/;"	f
+main	./lat_proc.c	/^main(int ac, char **av)$/;"	f
+main	./lat_rand.c	/^main(int ac, char **av)$/;"	f
+main	./lat_rpc.c	/^main(int ac, char **av)$/;"	f
+main	./lat_select.c	/^main(int ac, char **av)$/;"	f
+main	./lat_sem.c	/^main(int ac, char **av)$/;"	f
+main	./lat_sig.c	/^main(int ac, char **av)$/;"	f
+main	./lat_syscall.c	/^main(int ac, char **av)$/;"	f
+main	./lat_tcp.c	/^main(int ac, char **av)$/;"	f
+main	./lat_udp.c	/^main(int ac, char **av)$/;"	f
+main	./lat_unix.c	/^main(int ac, char **av)$/;"	f
+main	./lat_unix_connect.c	/^int main(int ac, char **av)$/;"	f
+main	./lat_usleep.c	/^main(int ac, char **av)$/;"	f
+main	./line.c	/^main(int ac, char **av)$/;"	f
+main	./lmdd.c	/^main(int ac, char **av)$/;"	f
+main	./lmhttp.c	/^main(int ac, char **av)$/;"	f
+main	./loop_o.c	/^main()$/;"	f
+main	./memsize.c	/^main(int ac, char **av)$/;"	f
+main	./mhz.c	/^main(int ac, char **av)$/;"	f
+main	./msleep.c	/^main(int ac, char **av)$/;"	f
+main	./par_mem.c	/^main(int ac, char **av)$/;"	f
+main	./par_ops.c	/^main(int ac, char **av)$/;"	f
+main	./rhttp.c	/^main(int ac, char **av)$/;"	f
+main	./seek.c	/^main(ac, av)$/;"	f
+main	./stream.c	/^main(int ac, char **av)$/;"	f
+main	./timing_o.c	/^main()$/;"	f
+main	./tlb.c	/^main(int ac, char **av)$/;"	f
+max	./lat_ctx.c	21;"	d	file:
+max	./lat_fs.c	/^	long	max;$/;"	m	struct:_state	file:
+max	./lat_select.c	/^	int	max;$/;"	m	struct:_state	file:
+max_parallelism	./par_ops.c	/^max_parallelism(benchmp_f* benchmarks, $/;"	f
+maxlen	./cache.c	/^	size_t	maxlen;$/;"	m	struct:cache_results	file:
+maxlen	./lib_mem.h	/^	size_t	maxlen;$/;"	m	struct:mem_state
+mb	./lib_timing.c	/^mb(uint64 bytes)$/;"	f
+mcp	./bw_mem.c	/^mcp(iter_t iterations, void *cookie)$/;"	f
+measure	./cache.c	/^measure(size_t size, int repetitions, $/;"	f
+measure	./lat_fs.c	/^measure(size_t size, int parallel, int warmup, int repetitions, void* cookie)$/;"	f
+mem_benchmark	./cache.c	/^mem_benchmark(iter_t iterations, void *cookie)$/;"	f
+mem_benchmark_rerun	./lib_mem.c	/^static int mem_benchmark_rerun = 0;$/;"	v	file:
+mem_benchmarks	./lib_mem.c	/^benchmp_f mem_benchmarks[] = {REPEAT_15(MEM_BENCHMARK_F)};$/;"	v
+mem_cleanup	./lib_mem.c	/^mem_cleanup(iter_t iterations, void* cookie)$/;"	f
+mem_initialize	./lib_mem.c	/^mem_initialize(iter_t iterations, void* cookie)$/;"	f
+mem_reset	./lib_mem.c	/^mem_reset()$/;"	f
+mem_state	./lib_mem.h	/^struct mem_state {$/;"	s
+micro	./lib_timing.c	/^micro(char *s, uint64 n)$/;"	f
+micromb	./lib_timing.c	/^micromb(uint64 sz, uint64 n)$/;"	f
+milli	./lib_timing.c	/^milli(char *s, uint64 n)$/;"	f
+mine	./lib_timing.c	44;"	d	file:
+mkfile	./lat_fs.c	/^mkfile(char *name, size_t size)$/;"	f
+mode	./mhz.c	/^mode(double values[], int n)$/;"	f
+morefds	./lib_timing.c	/^morefds(void)$/;"	f
+move	./bw_tcp.c	/^	uint64	move;$/;"	m	struct:_state	file:
+move	./bw_udp.c	/^	long	move;$/;"	m	struct:_state	file:
+msize	./bw_tcp.c	/^	size_t	msize;$/;"	m	struct:_state	file:
+msize	./bw_udp.c	/^	long	msize;$/;"	m	struct:_state	file:
+msize	./lat_rpc.c	/^	int	msize;$/;"	m	struct:state_	file:
+msize	./lat_tcp.c	/^	int	msize;$/;"	m	struct:_state	file:
+msize	./lat_udp.c	/^	int	msize;$/;"	m	struct:_state	file:
+msize	./lat_unix.c	/^	int	msize;$/;"	m	struct:_state	file:
+mstate	./lat_dram_page.c	/^	struct mem_state	mstate;$/;"	m	struct:dram_page_state	typeref:struct:dram_page_state::mem_state	file:
+n	./bench.h	/^	uint64 n;$/;"	m	struct:__anon1
+n	./getopt.c	/^static int n;$/;"	v	file:
+n	./lat_fs.c	/^	long	n;$/;"	m	struct:_state	file:
+n	./lat_sig.c	/^uint64	caught, n;$/;"	v
+n	./lat_usleep.c	/^                n;$/;"	v
+n	./lib_timing.c	/^static	int	n;$/;"	v	file:
+name	./lat_mmap.c	/^	char	*name;$/;"	m	struct:_state	file:
+name	./lmhttp.c	194;"	d	file:
+name	./lmhttp.c	252;"	d	file:
+names	./lat_fs.c	/^	char**	names;$/;"	m	struct:_state	file:
+names	./names.h	/^char *names[] = {$/;"	v
+nano	./lib_timing.c	/^nano(char *s, uint64 n)$/;"	f
+nano_quartile	./lib_debug.c	/^nano_quartile(uint64 n)$/;"	f
+nbytes	./bw_mem.c	/^	size_t	nbytes;$/;"	m	struct:_state	file:
+nbytes	./bw_mmap_rd.c	/^	size_t	nbytes;$/;"	m	struct:_state	file:
+nbytes	./lmhttp.c	/^static	int nbytes;		\/* bytes buffered *\/$/;"	v	file:
+ndirs	./lat_fs.c	/^	long	ndirs;$/;"	m	struct:_state	file:
+need_buf2	./bw_mem.c	/^	int	need_buf2;$/;"	m	struct:_state	file:
+need_warmup	./lib_timing.c	/^	int		need_warmup;$/;"	m	struct:__anon5	file:
+nflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+nlines	./lib_mem.h	/^	size_t	nlines;$/;"	m	struct:mem_state
+norepeat	./lmdd.c	/^uint64	*norepeat;$/;"	v
+norepeats	./lmdd.c	/^int	norepeats = -1;$/;"	v
+now	./lib_timing.c	/^now(void)$/;"	f
+npages	./lat_pagefault.c	/^	int npages;$/;"	m	struct:_state	file:
+npages	./lib_mem.h	/^	size_t	npages;$/;"	m	struct:mem_state
+num	./lat_select.c	/^	int	num;$/;"	m	struct:_state	file:
+nwords	./lib_mem.h	/^	size_t	nwords;$/;"	m	struct:mem_state
+nz	./lib_timing.c	21;"	d	file:
+off64_t	./bench.h	/^typedef int64 off64_t;$/;"	t
+one_op	./lib_timing.c	/^one_op(register long *p)$/;"	f	file:
+open_f	./lat_select.c	/^typedef int (*open_f)(void* cookie);$/;"	t	file:
+open_file	./lat_select.c	/^open_file(void* cookie)$/;"	f
+open_socket	./lat_select.c	/^open_socket(void* cookie)$/;"	f
+optarg	./bench.h	279;"	d
+optarg	./getopt.c	/^char   *optarg;		\/* argument to an option *\/$/;"	v
+opterr	./bench.h	280;"	d
+optind	./bench.h	278;"	d
+optind	./getopt.c	/^int     optind;		\/* next arg in argv we process *\/$/;"	v
+optopt	./bench.h	281;"	d
+optopt	./getopt.c	/^int	optopt;		\/* option that is in error, if we return an error *\/$/;"	v
+out	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+output	./lmdd.c	/^char	*output;$/;"	v
+overhead	./bw_mem.c	/^	double	overhead;$/;"	m	struct:_state	file:
+overhead	./lat_ctx.c	/^	double	overhead;$/;"	m	struct:_state	file:
+p	./lat_ctx.c	/^	int	**p;$/;"	m	struct:_state	file:
+p	./lat_pmake.c	/^	long**	p;$/;"	m	struct:_state	file:
+p	./lib_mem.h	/^	char*	p[MAX_MEM_PARALLELISM];$/;"	m	struct:mem_state
+p	./lib_timing.c	/^static long	*p = (long *)&p;$/;"	v	file:
+p1	./lat_pipe.c	/^	int	p1[2];$/;"	m	struct:_state	file:
+p2	./lat_pipe.c	/^	int	p2[2];$/;"	m	struct:_state	file:
+p64	./lib_timing.c	/^p64(uint64 big)$/;"	f
+p64buf	./lib_timing.c	/^static	char	p64buf[10][20];$/;"	v	file:
+p64sz	./lib_timing.c	/^p64sz(uint64 big)$/;"	f
+pages	./lat_pagefault.c	/^	size_t* pages;$/;"	m	struct:_state	file:
+pages	./lib_mem.h	/^	size_t*	pages;$/;"	m	struct:mem_state
+pagesize	./lib_mem.h	/^	size_t	pagesize;$/;"	m	struct:mem_state
+pagesort	./cache.c	/^pagesort(size_t n, size_t* pages, double* latencies)$/;"	f
+par_mem	./lib_mem.c	/^par_mem(size_t len, int warmup, int repetitions, struct mem_state* state)$/;"	f
+parallel	./lib_timing.c	/^	int		parallel;$/;"	m	struct:__anon5	file:
+percent_point	./lib_debug.c	/^percent_point(double fraction)$/;"	f
+permutation	./lib_timing.c	/^permutation(size_t max, size_t scale)$/;"	f
+pid	./bw_pipe.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./bw_unix.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./lat_cmd.c	/^	pid_t	pid;$/;"	m	struct:_state	file:
+pid	./lat_fcntl.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./lat_fifo.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./lat_pipe.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./lat_select.c	/^	pid_t	pid;$/;"	m	struct:_state	file:
+pid	./lat_sem.c	/^	int	pid;$/;"	m	struct:_state	file:
+pid	./lat_unix.c	/^	int	pid;$/;"	m	struct:_state	file:
+pids	./lat_ctx.c	/^	pid_t*	pids;$/;"	m	struct:_state	file:
+pids	./lat_pmake.c	/^	pid_t*	pids;$/;"	m	struct:_state	file:
+pipes	./bw_unix.c	/^	int	pipes[2];$/;"	m	struct:_state	file:
+poff	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+possibilities	./lib_timing.c	/^static int     possibilities[] = { 5000, 10000, 50000, 100000 };$/;"	v	file:
+print_data	./mhz.c	/^print_data(double mhz, result_t* data)$/;"	f
+print_mem	./lib_debug.c	/^print_mem(char* addr, size_t size, size_t line)$/;"	f
+print_results	./lib_debug.c	/^print_results(int details)$/;"	f
+procA	./lat_fcntl.c	/^procA(struct _state *state)$/;"	f
+procB	./lat_fcntl.c	/^procB(struct _state *state)$/;"	f
+process_size	./lat_ctx.c	/^	int	process_size;$/;"	m	struct:_state	file:
+procs	./lat_ctx.c	/^	int	procs;$/;"	m	struct:_state	file:
+prot	./lat_sig.c	/^prot(int s)$/;"	f
+prot_env	./lat_sig.c	/^jmp_buf	prot_env;$/;"	v
+proto	./lat_rpc.c	/^char	*proto[] = { "tcp", "udp", 0 };$/;"	v
+protocol	./lat_rpc.c	/^	char	*protocol;$/;"	m	struct:state_	file:
+ptime	./lib_timing.c	/^ptime(uint64 n)$/;"	f
+q	./lib_timing.c	/^static long	*q = (long *)&q;$/;"	v	file:
+r	./lib_timing.c	/^	result_t*	r;$/;"	m	struct:__anon5	file:
+r_size	./lib_timing.c	/^	int		r_size;$/;"	m	struct:__anon5	file:
+random	./lat_mmap.c	/^	int	random;$/;"	m	struct:_state	file:
+ratio	./cache.c	/^	double	ratio;$/;"	m	struct:cache_results	file:
+rd	./bw_mem.c	/^rd(iter_t iterations, void *cookie)$/;"	f
+rd	./lat_fifo.c	/^	int	rd;$/;"	m	struct:_state	file:
+rdwr	./bw_mem.c	/^rdwr(iter_t iterations, void *cookie)$/;"	f
+reader	./bw_pipe.c	/^reader(iter_t iterations, void * cookie)$/;"	f
+reader	./bw_unix.c	/^reader(iter_t iterations, void* cookie)$/;"	f
+readfd	./bw_pipe.c	/^	int	readfd;$/;"	m	struct:_state	file:
+regression	./lib_stats.c	/^regression(double *x, double *y, double *sig, int n,$/;"	f
+regroup	./lat_dram_page.c	/^regroup(size_t* pages, int groupsize, void* cookie)$/;"	f
+release	./lat_fcntl.c	33;"	d	file:
+remove_chunk	./cache.c	/^remove_chunk(size_t i, size_t chunk, size_t npages, size_t* pages, $/;"	f
+repetitions	./lib_timing.c	/^        int		repetitions;$/;"	m	struct:__anon5	file:
+response	./lib_timing.c	/^	int		response;$/;"	m	struct:__anon5	file:
+result_signal	./lib_timing.c	/^	int		result_signal;$/;"	m	struct:__anon5	file:
+result_t	./bench.h	/^} result_t;$/;"	t	typeref:struct:__anon2
+results	./lib_timing.c	/^static result_t* results = &_results;$/;"	v	file:
+reverse_bits	./lib_sched.c	/^reverse_bits(int cpu)$/;"	f
+revision	./clock.c	/^char	*revision = "$Revision$";$/;"	v
+rindex	./bench.h	147;"	d
+rpc_xact_1	./lat_rpc.c	/^rpc_xact_1(msg, transp)$/;"	f
+rthist	./lmdd.c	/^int	rthist[12];		\/* histogram of read times *\/$/;"	v
+ru	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
+ru_start	./lib_timing.c	/^static struct rusage ru_start, ru_stop;$/;"	v	typeref:struct:rusage	file:
+ru_stop	./lib_timing.c	/^static struct rusage ru_start, ru_stop;$/;"	v	typeref:struct:	file:
+rusage	./lib_timing.c	/^rusage(void)$/;"	f
+s1	./lat_fcntl.c	/^struct	flock s1, s2;$/;"	v	typeref:struct:flock
+s2	./lat_fcntl.c	/^struct	flock s1, s2;$/;"	v	typeref:struct:
+save_data	./mhz.c	/^save_data(result_t* data, result_t* data_save)$/;"	f
+save_median	./lib_timing.c	/^save_median()$/;"	f
+save_minimum	./lib_timing.c	/^save_minimum()$/;"	f
+save_n	./lib_timing.c	/^save_n(uint64 n)$/;"	f
+scalar	./stream.c	/^	double	scalar;$/;"	m	struct:_state	file:
+scale	./stream.c	/^scale(iter_t iterations, void *cookie)$/;"	f
+sched_ncpus	./lib_sched.c	/^sched_ncpus()$/;"	f
+sched_pin	./lib_sched.c	/^sched_pin(int cpu)$/;"	f
+search	./cache.c	/^search(int left, int right, int repetitions, $/;"	f
+seek	./disk.c	/^seek(char *disk, int oflag)$/;"	f
+seekto	./lib_timing.c	/^seekto(int fd, off64_t off, int whence)$/;"	f
+semid	./lat_sem.c	/^	int	semid;$/;"	m	struct:_state	file:
+seq	./bw_udp.c	/^	int	seq;$/;"	m	struct:_state	file:
+seq	./lat_udp.c	/^	int	seq;$/;"	m	struct:_state	file:
+server	./bw_tcp.c	/^	char	*server;$/;"	m	struct:_state	file:
+server	./bw_udp.c	/^	char	*server;$/;"	m	struct:_state	file:
+server	./lat_connect.c	/^	char	*server;$/;"	m	struct:_state	file:
+server	./lat_rpc.c	/^	char	*server;$/;"	m	struct:state_	file:
+server	./lat_select.c	/^server(void* cookie)$/;"	f
+server	./lat_tcp.c	/^	char	*server;$/;"	m	struct:_state	file:
+server	./lat_udp.c	/^	char	*server;$/;"	m	struct:_state	file:
+server_main	./bw_tcp.c	/^server_main()$/;"	f
+server_main	./bw_udp.c	/^server_main()$/;"	f
+server_main	./lat_connect.c	/^server_main()$/;"	f
+server_main	./lat_rpc.c	/^server_main()$/;"	f
+server_main	./lat_tcp.c	/^server_main()$/;"	f
+server_main	./lat_udp.c	/^server_main()$/;"	f
+server_main	./lat_unix_connect.c	/^void server_main(void)$/;"	f
+set	./lat_select.c	/^	fd_set  set;$/;"	m	struct:_state	file:
+set_alarm	./memsize.c	/^set_alarm(uint64 usecs)$/;"	f
+set_realtime	./lat_usleep.c	/^set_realtime()$/;"	f
+set_results	./lib_timing.c	/^set_results(result_t *r)$/;"	f
+settime	./lib_timing.c	/^settime(uint64 usecs)$/;"	f
+setup	./lat_pmake.c	/^setup(iter_t iterations, void* cookie)$/;"	f
+setup_names	./lat_fs.c	/^setup_names(iter_t iterations, void* cookie)$/;"	f
+setup_names_recurse	./lat_fs.c	/^setup_names_recurse(iter_t* foff, iter_t* doff, int depth, struct _state* state)$/;"	f
+setup_rm	./lat_fs.c	/^setup_rm(iter_t iterations, void* cookie)$/;"	f
+sigchld_wait_handler	./lib_timing.c	/^sigchld_wait_handler(int signo)$/;"	f
+size	./lat_fs.c	/^	size_t	size;$/;"	m	struct:_state	file:
+size	./lat_mmap.c	/^	size_t	size;$/;"	m	struct:_state	file:
+size	./lat_pagefault.c	/^	int size;$/;"	m	struct:_state	file:
+sizeof_result	./lib_timing.c	/^sizeof_result(int repetitions)$/;"	f
+slope	./cache.c	/^	double	slope;$/;"	m	struct:cache_results	file:
+sock	./bw_tcp.c	/^	int	sock;$/;"	m	struct:_state	file:
+sock	./bw_udp.c	/^	int	sock;$/;"	m	struct:_state	file:
+sock	./lat_select.c	/^	int	sock;$/;"	m	struct:_state	file:
+sock	./lat_tcp.c	/^	int	sock;$/;"	m	struct:_state	file:
+sock	./lat_udp.c	/^	int	sock;$/;"	m	struct:_state	file:
+sock_optimize	./lib_tcp.c	/^sock_optimize(int sock, int flags)$/;"	f
+socklen_t	./bench.h	/^typedef int socklen_t;$/;"	t
+sockport	./lib_tcp.c	/^sockport(int s)$/;"	f
+source	./bw_tcp.c	/^source(int data)$/;"	f
+source	./lmhttp.c	/^source(int sock)$/;"	f
+srand48	./bench.h	155;"	d
+srand48	./bench.h	158;"	d
+start	./lib_timing.c	/^start(struct timeval *tv)$/;"	f
+start_signal	./lib_timing.c	/^	int		start_signal;$/;"	m	struct:__anon5	file:
+start_tv	./lib_timing.c	/^static struct timeval 	start_tv, stop_tv;$/;"	v	typeref:struct:timeval	file:
+state	./lib_timing.c	/^	benchmp_state	state;$/;"	m	struct:__anon5	file:
+state_	./lat_rpc.c	/^typedef struct state_ {$/;"	s	file:
+state_t	./bw_file_rd.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./bw_mem.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./bw_mmap_rd.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./bw_tcp.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./bw_udp.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_cmd.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_connect.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_fifo.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_mmap.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_pagefault.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_pipe.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_pmake.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_rpc.c	/^} state_t;$/;"	t	typeref:struct:state_	file:
+state_t	./lat_select.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_sem.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_tcp.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_udp.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+state_t	./lat_usleep.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
+step	./lat_mem_rd.c	/^step(size_t k)$/;"	f
+stop	./lib_timing.c	/^stop(struct timeval *begin, struct timeval *end)$/;"	f
+stop_tv	./lib_timing.c	/^static struct timeval 	start_tv, stop_tv;$/;"	v	typeref:struct:	file:
+streq	./bench.h	150;"	d
+stride_initialize	./lib_mem.c	/^stride_initialize(iter_t iterations, void* cookie)$/;"	f
+sum	./stream.c	/^sum(iter_t iterations, void *cookie)$/;"	f
+sv	./lat_unix.c	/^	int	sv[2];$/;"	m	struct:_state	file:
+t_overhead	./lib_timing.c	/^t_overhead(void)$/;"	f
+tcp_accept	./lib_tcp.c	/^tcp_accept(int sock, int rdwr)$/;"	f
+tcp_connect	./lib_tcp.c	/^tcp_connect(char *host, int prog, int rdwr)$/;"	f
+tcp_done	./lib_tcp.c	/^tcp_done(int prog)$/;"	f
+tcp_server	./lib_tcp.c	/^tcp_server(int prog, int rdwr)$/;"	f
+test_chunk	./cache.c	/^test_chunk(size_t i, size_t chunk, size_t npages, size_t* pages, $/;"	f
+test_malloc	./memsize.c	/^test_malloc(size_t size)$/;"	f
+test_points	./lib_timing.c	/^static double test_points[] = {1.015, 1.02, 1.035};$/;"	v	file:
+test_time	./lib_timing.c	/^test_time(int enough)$/;"	f	file:
+thrash_initialize	./lib_mem.c	/^thrash_initialize(iter_t iterations, void* cookie)$/;"	f
+time_N	./lib_timing.c	/^time_N(iter_t N)$/;"	f	file:
+time_io_only	./bw_file_rd.c	/^time_io_only(iter_t iterations,void * cookie)$/;"	f
+time_no_open	./bw_mmap_rd.c	/^time_no_open(iter_t iterations, void * cookie)$/;"	f
+time_with_open	./bw_file_rd.c	/^time_with_open(iter_t iterations, void * cookie)$/;"	f
+time_with_open	./bw_mmap_rd.c	/^time_with_open(iter_t iterations, void *cookie)$/;"	f
+timeit	./memsize.c	/^timeit(char *where, size_t size)$/;"	f
+timeout	./lat_udp.c	/^timeout()$/;"	f
+timer_e	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	t	typeref:enum:__anon3	file:
+timespent	./lib_timing.c	/^timespent(void)$/;"	f
+timing	./lib_timing.c	/^timing(FILE *out)$/;"	f
+timing_interval	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+tlb_cleanup	./lib_mem.c	/^tlb_cleanup(iter_t iterations, void* cookie)$/;"	f
+tlb_initialize	./lib_mem.c	/^tlb_initialize(iter_t iterations, void* cookie)$/;"	f
+tmpdir	./lat_fs.c	/^	char	*tmpdir;$/;"	m	struct:_state	file:
+touch	./lib_timing.c	/^touch(char *buf, size_t nbytes)$/;"	f
+touchRange	./memsize.c	/^touchRange(char *p, size_t range, ssize_t stride)$/;"	f	file:
+triad	./stream.c	/^triad(iter_t iterations, void *cookie)$/;"	f
+tvdelta	./lib_timing.c	/^tvdelta(struct timeval *start, struct timeval *stop)$/;"	f
+tvsub	./lib_timing.c	/^tvsub(struct timeval * tdiff, struct timeval * t1, struct timeval * t0)$/;"	f
+two_op	./lib_timing.c	/^two_op(register long *p)$/;"	f	file:
+type	./lmhttp.c	/^type(char *name)$/;"	f
+u	./bench.h	/^	uint64 u;$/;"	m	struct:__anon1
+udp_connect	./lib_udp.c	/^udp_connect(char *host, u_long prog, int rdwr)$/;"	f
+udp_done	./lib_udp.c	/^udp_done(u_long prog)$/;"	f
+udp_server	./lib_udp.c	/^udp_server(u_long prog, int rdwr)$/;"	f
+uint	./bench.h	/^typedef unsigned int uint;$/;"	t
+uint64	./bench.h	/^typedef uint64_t uint64;$/;"	t
+uint64	./bench.h	/^typedef unsigned long long uint64;$/;"	t
+uint64_bootstrap_stderr	./lib_stats.c	/^double	uint64_bootstrap_stderr(uint64 *values, int size, uint64_stat f)$/;"	f
+uint64_compare	./lib_stats.c	/^uint64_compare(const void *a, const void *b)$/;"	f
+uint64_kurtosis	./lib_stats.c	/^double	uint64_kurtosis(uint64 *values, int size)$/;"	f
+uint64_max	./lib_stats.c	/^uint64_max(uint64 *values, int size)$/;"	f
+uint64_mean	./lib_stats.c	/^uint64_mean(uint64 *values, int size)$/;"	f
+uint64_median	./lib_stats.c	/^uint64_median(uint64 *values, int size)$/;"	f
+uint64_min	./lib_stats.c	/^uint64_min(uint64 *values, int size)$/;"	f
+uint64_moment	./lib_stats.c	/^double	uint64_moment(int moment, uint64 *values, int size)$/;"	f
+uint64_skew	./lib_stats.c	/^double	uint64_skew(uint64 *values, int size)$/;"	f
+uint64_stat	./stats.h	/^typedef	uint64 (*uint64_stat)(uint64 *values, int size);$/;"	t
+uint64_stderr	./lib_stats.c	/^double	uint64_stderr(uint64 *values, int size)$/;"	f
+uint64_variance	./lib_stats.c	/^double	uint64_variance(uint64 *values, int size)$/;"	f
+ulong	./bench.h	151;"	d
+unix_accept	./lib_unix.c	/^unix_accept(int sock)$/;"	f
+unix_connect	./lib_unix.c	/^unix_connect(char *path)$/;"	f
+unix_done	./lib_unix.c	/^unix_done(int sock, char *path)$/;"	f
+unix_server	./lib_unix.c	/^unix_server(char *path)$/;"	f
+unlock	./lat_fcntl.c	/^struct	flock lock, unlock;$/;"	v	typeref:struct:
+use_int	./lib_timing.c	/^use_int(int result) { use_result_dummy += result; }$/;"	f
+use_pointer	./lib_timing.c	/^use_pointer(void *result) { use_result_dummy += (long)result; }$/;"	f
+use_result_dummy	./lib_timing.c	/^static volatile uint64	use_result_dummy;$/;"	v	file:
+usecs	./lat_usleep.c	/^    unsigned long usecs;$/;"	m	struct:_state	file:
+v	./bench.h	/^	value_t	v[TRIES];$/;"	m	struct:__anon2
+value	./lat_usleep.c	/^struct itimerval value;$/;"	v	typeref:struct:itimerval
+value_t	./bench.h	/^} value_t;$/;"	t	typeref:struct:__anon1
+variation	./cache.c	/^	double	variation;$/;"	m	struct:cache_results	file:
+waiton	./lat_fcntl.c	32;"	d	file:
+warmup	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+warning	./lmdd.c	/^warning(char *s)$/;"	f
+where	./lat_pagefault.c	/^	char* where;$/;"	m	struct:_state	file:
+where	./lat_sig.c	/^	char*	where;$/;"	m	struct:_state	file:
+width	./lib_mem.h	/^	int	width;$/;"	m	struct:mem_state
+words	./lib_mem.h	/^	size_t*	words;$/;"	m	struct:mem_state
+words_initialize	./lib_mem.c	/^words_initialize(size_t max, int scale)$/;"	f
+work	./lat_pmake.c	/^work(register iter_t iterations, void* cookie)$/;"	f
+worker	./lmhttp.c	/^worker()$/;"	f
+wr	./bw_mem.c	/^wr(iter_t iterations, void *cookie)$/;"	f
+wr	./lat_fifo.c	/^	int	wr;$/;"	m	struct:_state	file:
+writer	./bw_pipe.c	/^writer(int writefd, char* buf, size_t xfer)$/;"	f
+writer	./bw_unix.c	/^writer(int controlfd, int writefd, char* buf, void* cookie)$/;"	f
+writer	./lat_fifo.c	/^writer(register int w, register int r)$/;"	f
+writer	./lat_pipe.c	/^writer(register int w, register int r)$/;"	f
+writer	./lat_sem.c	/^writer(register int sid)$/;"	f
+wthist	./lmdd.c	/^int	wthist[12];		\/* histogram of write times *\/$/;"	v
+x	./lat_pmake.c	/^	long*	x;		\/* used by work() *\/$/;"	m	struct:_state	file:
+xact_prog_1	./lat_rpc.c	/^xact_prog_1(rqstp, transp)$/;"	f	file:
+xfer	./bw_pipe.c	/^	size_t	xfer;	\/* bytes to read\/write per "packet" *\/$/;"	m	struct:_state	file:
+xfer	./bw_unix.c	/^	size_t	xfer;	\/* bytes to read\/write per "packet" *\/$/;"	m	struct:_state	file:
+xfersize	./bw_file_rd.c	/^size_t	xfersize;	\/* do it in units of this *\/$/;"	v
+zflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
+zone	./disk.c	/^zone(char *disk, int oflag, int bsize)$/;"	f

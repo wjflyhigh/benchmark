@@ -179,9 +179,10 @@ benchmp(benchmp_f initialize,
 		repetitions = (1 < parallel || 1000000 <= enough ? 1 : TRIES);
 
 	/* initialize results */
-	settime(0);
-	save_n(1);
+//	settime(0);
+//	save_n(1);
 
+#if 0
 	if (parallel > 1) {
 		/* Compute the baseline performance */
 		benchmp(initialize, benchmark, cleanup, 
@@ -201,7 +202,9 @@ benchmp(benchmp_f initialize,
 		settime(0);
 		save_n(1);
 	}
+#endif //delect by shixing
 
+#if 0 
 	/* Create the necessary pipes for control */
 	if (pipe(response) < 0
 	    || pipe(start_signal) < 0
@@ -319,6 +322,22 @@ cleanup_exit:
 #ifdef _DEBUG
 	fprintf(stderr, "benchmp(0x%x, 0x%x, 0x%x, %d, %d, 0x%x): exiting\n", (unsigned int)initialize, (unsigned int)benchmark, (unsigned int)cleanup, enough, parallel, (unsigned int)cookie);
 #endif
+#endif //delect by shixing
+
+	benchmp_child(initialize, 
+		      benchmark, 
+		      cleanup, 
+		      i,
+		      response[1], 
+		      start_signal[0], 
+		      result_signal[0], 
+		      exit_signal[0],
+		      enough,
+		      iterations,
+		      parallel,
+		      repetitions,
+		      cookie
+		);
 }
 
 void
@@ -613,7 +632,7 @@ benchmp_child(benchmp_f initialize,
 	_benchmp_child_state.i = 0;
 	_benchmp_child_state.r_size = sizeof_result(repetitions);
 	_benchmp_child_state.r = (result_t*)malloc(_benchmp_child_state.r_size);
-
+#if 0
 	if (!_benchmp_child_state.r) return;
 	insertinit(_benchmp_child_state.r);
 	set_results(_benchmp_child_state.r);
@@ -634,7 +653,7 @@ benchmp_child(benchmp_f initialize,
 	}
 	if (benchmp_sigterm_received)
 		benchmp_child_sigterm(SIGTERM);
-
+#endif //delect by shixing
 	/* start experiments, collecting results */
 	insertinit(_benchmp_child_state.r);
 
@@ -669,7 +688,7 @@ benchmp_interval(void* _state)
 		result -= t_overhead() + get_n() * l_overhead();
 		settime(result >= 0. ? (uint64)result : 0.);
 	}
-
+#if 0
 	/* if the parent died, then give up */
 	if (getppid() == 1 && state->cleanup) {
 		if (benchmp_sigchld_handler == SIG_DFL)
@@ -681,7 +700,7 @@ benchmp_interval(void* _state)
 	timeout.tv_sec = 0;
 	timeout.tv_usec = 0;
 	FD_ZERO(&fds);
-
+#endif
 	switch (state->state) {
 	case warmup:
 		iterations = state->iterations_batch;

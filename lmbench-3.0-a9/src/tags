@@ -193,7 +193,7 @@ IO	./disk.c	122;"	d	file:
 IO	./disk.c	123;"	d	file:
 IO	./disk.c	90;"	d	file:
 IOSIZE	./disk.c	125;"	d	file:
-ITIMER	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+ITIMER	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon5	file:
 K	./lat_ops.c	/^	int	K;$/;"	m	struct:_state	file:
 K	./par_ops.c	/^	int	K;$/;"	m	struct:_state	file:
 KB	./lib_timing.c	29;"	d	file:
@@ -230,12 +230,12 @@ MMAP_FLAGS	./bw_mmap_rd.c	21;"	d	file:
 MMAP_FLAGS	./bw_mmap_rd.c	23;"	d	file:
 MMAP_FLAGS	./lmhttp.c	18;"	d	file:
 MMAP_FLAGS	./lmhttp.c	20;"	d	file:
-N	./bench.h	/^	int	N;$/;"	m	struct:__anon2
+N	./bench.h	/^	int	N;$/;"	m	struct:__anon4
 N	./bw_mem.c	/^	size_t	N;$/;"	m	struct:_state	file:
 N	./lat_mmap.c	20;"	d	file:
 N	./lat_ops.c	/^	int	N;$/;"	m	struct:_state	file:
 N	./par_ops.c	/^	int	N;$/;"	m	struct:_state	file:
-NANOSLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+NANOSLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon5	file:
 NO_PORTMAPPER	./bench.h	88;"	d
 NTESTS	./mhz.c	167;"	d	file:
 Notrunc	./lmdd.c	/^int	Realtime, Notrunc;$/;"	v
@@ -283,7 +283,7 @@ PREAMBLE	./par_ops.c	349;"	d	file:
 PREAMBLE	./par_ops.c	355;"	d	file:
 PROG	./lat_proc.c	20;"	d	file:
 PROG	./lat_proc.c	23;"	d	file:
-PSELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+PSELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon5	file:
 PSIZE	./lat_mmap.c	19;"	d	file:
 Print	./lmdd.c	/^int     awrite, poff, out, Print, Fsync, Sync, Flush, Bsize, ru;$/;"	v
 REAL_SHORT	./bench.h	173;"	d
@@ -363,7 +363,7 @@ SAVE	./par_ops.c	350;"	d	file:
 SAVE	./par_ops.c	356;"	d	file:
 SECS	./lib_timing.c	43;"	d	file:
 SEEKPOINTS	./disk.c	17;"	d	file:
-SELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+SELECT	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon5	file:
 SHELL	./Makefile	/^SHELL=\/bin\/sh$/;"	m
 SHORT	./bench.h	174;"	d
 SMALLEST_LINE	./bench.h	169;"	d
@@ -428,7 +428,7 @@ UNIX_CONTROL	./bench.h	122;"	d
 UNIX_DATA	./bench.h	123;"	d
 UNIX_LAT	./bench.h	124;"	d
 USE_VALLOC	./lmdd.c	57;"	d	file:
-USLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon3	file:
+USLEEP	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	e	enum:__anon5	file:
 UTILS	./Makefile	/^UTILS=..\/scripts\/target ..\/scripts\/os ..\/scripts\/gnu-os ..\/scripts\/compiler \\$/;"	m
 VALLOC	./lmdd.c	59;"	d	file:
 VALLOC	./lmdd.c	61;"	d	file:
@@ -517,7 +517,7 @@ benchmark	./lat_pagefault.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
 benchmark	./lat_rpc.c	/^benchmark(iter_t iterations, void* _state)$/;"	f
 benchmark	./lat_unix.c	/^benchmark(iter_t iterations, void* cookie)$/;"	f
 benchmark	./lat_unix_connect.c	/^void benchmark(iter_t iterations, void* cookie)$/;"	f
-benchmark	./lib_timing.c	/^	benchmp_f	benchmark;$/;"	m	struct:__anon5	file:
+benchmark	./lib_timing.c	/^	benchmp_f	benchmark;$/;"	m	struct:__anon2	file:
 benchmark_loads	./lat_dram_page.c	/^benchmark_loads(iter_t iterations, void *cookie)$/;"	f
 benchmark_loads	./lat_mem_rd.c	/^benchmark_loads(iter_t iterations, void *cookie)$/;"	f
 benchmark_mk	./lat_fs.c	/^benchmark_mk(iter_t iterations, void* cookie)$/;"	f
@@ -528,7 +528,7 @@ benchmp	./lib_timing.c	/^benchmp(benchmp_f initialize, $/;"	f
 benchmp_child	./lib_timing.c	/^benchmp_child(benchmp_f initialize, $/;"	f
 benchmp_child_sigchld	./lib_timing.c	/^benchmp_child_sigchld(int signo)$/;"	f
 benchmp_child_sigterm	./lib_timing.c	/^benchmp_child_sigterm(int signo)$/;"	f
-benchmp_child_state	./lib_timing.c	/^} benchmp_child_state;$/;"	t	typeref:struct:__anon5	file:
+benchmp_child_state	./lib_timing.c	/^} benchmp_child_state;$/;"	t	typeref:struct:__anon2	file:
 benchmp_childid	./lib_timing.c	/^benchmp_childid()$/;"	f
 benchmp_f	./bench.h	/^typedef void (*benchmp_f)(iter_t iterations, void* cookie);$/;"	t
 benchmp_getstate	./lib_timing.c	/^benchmp_getstate()$/;"	f
@@ -544,7 +544,7 @@ benchmp_sigchld_received	./lib_timing.c	/^static int	benchmp_sigchld_received;$/
 benchmp_sigterm	./lib_timing.c	/^benchmp_sigterm(int signo)$/;"	f
 benchmp_sigterm_handler	./lib_timing.c	/^void (*benchmp_sigterm_handler)(int);$/;"	v
 benchmp_sigterm_received	./lib_timing.c	/^static int	benchmp_sigterm_received;$/;"	v	file:
-benchmp_state	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	t	typeref:enum:__anon4	file:
+benchmp_state	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	t	typeref:enum:__anon1	file:
 bool_t	./bench.h	/^typedef unsigned char bool_t;$/;"	t
 bread	./lib_timing.c	/^bread(void* buf, long nbytes)$/;"	f
 buf	./bw_file_rd.c	/^void	*buf;		\/* do the I\/O here *\/$/;"	v
@@ -574,7 +574,7 @@ caught	./lat_usleep.c	/^uint64          caught,$/;"	v
 check_mem	./lib_debug.c	/^check_mem(char* addr, size_t size)$/;"	f
 check_memory	./cache.c	/^check_memory(size_t size, struct mem_state* state)$/;"	f
 child_pid	./lat_proc.c	/^pid_t child_pid;$/;"	v
-childid	./lib_timing.c	/^	int		childid;$/;"	m	struct:__anon5	file:
+childid	./lib_timing.c	/^	int		childid;$/;"	m	struct:__anon2	file:
 chkarg	./lmdd.c	/^chkarg(char *arg)$/;"	f
 chop	./lat_http.c	/^void chop(register char *s) { while (*s && *s != '\\n') s++; *s = 0; }$/;"	f
 cl	./lat_rpc.c	/^	CLIENT	*cl;$/;"	m	struct:state_	file:
@@ -601,7 +601,7 @@ cleanup	./lat_sem.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
 cleanup	./lat_tcp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
 cleanup	./lat_udp.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
 cleanup	./lat_unix.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
-cleanup	./lib_timing.c	/^	benchmp_f	cleanup;$/;"	m	struct:__anon5	file:
+cleanup	./lib_timing.c	/^	benchmp_f	cleanup;$/;"	m	struct:__anon2	file:
 cleanup	./stream.c	/^cleanup(iter_t iterations, void* cookie)$/;"	f
 cleanup_mk	./lat_fs.c	/^cleanup_mk(iter_t iterations, void* cookie)$/;"	f
 cleanup_names	./lat_fs.c	/^cleanup_names(iter_t iterations, void* cookie)$/;"	f
@@ -620,8 +620,8 @@ compute_mhz	./mhz.c	/^compute_mhz(result_t *r)$/;"	f
 compute_times	./tlb.c	/^compute_times(int pages, int warmup, int repetitions,$/;"	f
 context	./lib_timing.c	/^context(uint64 xfers)$/;"	f
 control	./bw_unix.c	/^	int	control[2];$/;"	m	struct:_state	file:
-cookie	./lib_timing.c	/^	void*		cookie;$/;"	m	struct:__anon5	file:
-cooldown	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+cookie	./lib_timing.c	/^	void*		cookie;$/;"	m	struct:__anon2	file:
+cooldown	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon1	file:
 copy	./stream.c	/^copy(iter_t iterations, void *cookie)$/;"	f
 count	./bw_file_rd.c	/^size_t	count;		\/* bytes to move (can't be modified) *\/$/;"	v
 cp	./lib_timing.c	/^cp(char* src, char* dst, mode_t mode)$/;"	f
@@ -707,10 +707,10 @@ drand48	./bench.h	156;"	d
 drand48	./bench.h	159;"	d
 duration	./lib_timing.c	/^duration(long N)$/;"	f	file:
 echo	./lat_http.c	/^int	echo;$/;"	v
-enough	./lib_timing.c	/^	int		enough;$/;"	m	struct:__anon5	file:
+enough	./lib_timing.c	/^	int		enough;$/;"	m	struct:__anon2	file:
 enough_duration	./lib_timing.c	/^enough_duration(register long N, register TYPE ** p)$/;"	f	file:
 error	./lmdd.c	/^error(char *s)$/;"	f
-exit_signal	./lib_timing.c	/^	int		exit_signal;$/;"	m	struct:__anon5	file:
+exit_signal	./lib_timing.c	/^	int		exit_signal;$/;"	m	struct:__anon2	file:
 fcp	./bw_mem.c	/^fcp(iter_t iterations, void *cookie)$/;"	f
 fd	./bw_file_rd.c	/^	int fd;$/;"	m	struct:_state	file:
 fd	./bw_mmap_rd.c	/^	int	fd;$/;"	m	struct:_state	file:
@@ -769,7 +769,7 @@ hash	./lmdd.c	/^int	hash;$/;"	v
 http	./lat_http.c	/^http(char *server, char *file, int prog)$/;"	f
 http_time	./lmhttp.c	/^char	*http_time()$/;"	f
 i	./busy.c	/^volatile int i;$/;"	v
-i	./lib_timing.c	/^	long		i;$/;"	m	struct:__anon5	file:
+i	./lib_timing.c	/^	long		i;$/;"	m	struct:__anon2	file:
 id	./bw_file_rd.c	/^char	*id = "$Id$\\n";$/;"	v
 id	./bw_mem.c	/^char	*id = "$Id$";$/;"	v
 id	./bw_mmap_rd.c	/^char	*id = "$Id$\\n";$/;"	v
@@ -843,7 +843,7 @@ initialize	./lat_sem.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
 initialize	./lat_sig.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
 initialize	./lat_unix.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
 initialize	./lat_usleep.c	/^initialize(iter_t iterations, void *cookie)$/;"	f
-initialize	./lib_timing.c	/^	benchmp_f	initialize;$/;"	m	struct:__anon5	file:
+initialize	./lib_timing.c	/^	benchmp_f	initialize;$/;"	m	struct:__anon2	file:
 initialize	./stream.c	/^initialize(iter_t iterations, void* cookie)$/;"	f
 initialize_overhead	./lat_ctx.c	/^initialize_overhead(iter_t iterations, void* cookie)$/;"	f
 initialized	./lib_mem.h	/^	int	initialized;$/;"	m	struct:mem_state
@@ -869,9 +869,9 @@ interval	./lat_usleep.c	/^interval(int x)$/;"	f
 isdir	./lmhttp.c	/^isdir(char *name)$/;"	f
 iter_t	./bench.h	/^typedef u_long iter_t;$/;"	t
 iterations	./lat_pmake.c	/^	iter_t	iterations;	\/* how long each job should work *\/$/;"	m	struct:_state	file:
-iterations	./lib_timing.c	/^        iter_t		iterations;$/;"	m	struct:__anon5	file:
+iterations	./lib_timing.c	/^        iter_t		iterations;$/;"	m	struct:__anon2	file:
 iterations	./lib_timing.c	/^static		uint64	iterations;$/;"	v	file:
-iterations_batch	./lib_timing.c	/^	iter_t		iterations_batch;$/;"	m	struct:__anon5	file:
+iterations_batch	./lib_timing.c	/^	iter_t		iterations_batch;$/;"	m	struct:__anon2	file:
 jobs	./lat_pmake.c	/^	int	jobs;		\/* number of jobs to create *\/$/;"	m	struct:_state	file:
 kb	./lib_timing.c	/^kb(uint64 bytes)$/;"	f
 killhttp	./lat_http.c	/^killhttp(char *server, int prog)$/;"	f
@@ -993,7 +993,7 @@ msize	./lat_tcp.c	/^	int	msize;$/;"	m	struct:_state	file:
 msize	./lat_udp.c	/^	int	msize;$/;"	m	struct:_state	file:
 msize	./lat_unix.c	/^	int	msize;$/;"	m	struct:_state	file:
 mstate	./lat_dram_page.c	/^	struct mem_state	mstate;$/;"	m	struct:dram_page_state	typeref:struct:dram_page_state::mem_state	file:
-n	./bench.h	/^	uint64 n;$/;"	m	struct:__anon1
+n	./bench.h	/^	uint64 n;$/;"	m	struct:__anon3
 n	./getopt.c	/^static int n;$/;"	v	file:
 n	./lat_fs.c	/^	long	n;$/;"	m	struct:_state	file:
 n	./lat_sig.c	/^uint64	caught, n;$/;"	v
@@ -1011,7 +1011,7 @@ nbytes	./bw_mmap_rd.c	/^	size_t	nbytes;$/;"	m	struct:_state	file:
 nbytes	./lmhttp.c	/^static	int nbytes;		\/* bytes buffered *\/$/;"	v	file:
 ndirs	./lat_fs.c	/^	long	ndirs;$/;"	m	struct:_state	file:
 need_buf2	./bw_mem.c	/^	int	need_buf2;$/;"	m	struct:_state	file:
-need_warmup	./lib_timing.c	/^	int		need_warmup;$/;"	m	struct:__anon5	file:
+need_warmup	./lib_timing.c	/^	int		need_warmup;$/;"	m	struct:__anon2	file:
 nflg	./lmhttp.c	/^int	Dflg, dflg, nflg, lflg, fflg, zflg;$/;"	v
 nlines	./lib_mem.h	/^	size_t	nlines;$/;"	m	struct:mem_state
 norepeat	./lmdd.c	/^uint64	*norepeat;$/;"	v
@@ -1052,7 +1052,7 @@ pages	./lib_mem.h	/^	size_t*	pages;$/;"	m	struct:mem_state
 pagesize	./lib_mem.h	/^	size_t	pagesize;$/;"	m	struct:mem_state
 pagesort	./cache.c	/^pagesort(size_t n, size_t* pages, double* latencies)$/;"	f
 par_mem	./lib_mem.c	/^par_mem(size_t len, int warmup, int repetitions, struct mem_state* state)$/;"	f
-parallel	./lib_timing.c	/^	int		parallel;$/;"	m	struct:__anon5	file:
+parallel	./lib_timing.c	/^	int		parallel;$/;"	m	struct:__anon2	file:
 percent_point	./lib_debug.c	/^percent_point(double fraction)$/;"	f
 permutation	./lib_timing.c	/^permutation(size_t max, size_t scale)$/;"	f
 pid	./bw_pipe.c	/^	int	pid;$/;"	m	struct:_state	file:
@@ -1082,8 +1082,8 @@ proto	./lat_rpc.c	/^char	*proto[] = { "tcp", "udp", 0 };$/;"	v
 protocol	./lat_rpc.c	/^	char	*protocol;$/;"	m	struct:state_	file:
 ptime	./lib_timing.c	/^ptime(uint64 n)$/;"	f
 q	./lib_timing.c	/^static long	*q = (long *)&q;$/;"	v	file:
-r	./lib_timing.c	/^	result_t*	r;$/;"	m	struct:__anon5	file:
-r_size	./lib_timing.c	/^	int		r_size;$/;"	m	struct:__anon5	file:
+r	./lib_timing.c	/^	result_t*	r;$/;"	m	struct:__anon2	file:
+r_size	./lib_timing.c	/^	int		r_size;$/;"	m	struct:__anon2	file:
 random	./lat_mmap.c	/^	int	random;$/;"	m	struct:_state	file:
 ratio	./cache.c	/^	double	ratio;$/;"	m	struct:cache_results	file:
 rd	./bw_mem.c	/^rd(iter_t iterations, void *cookie)$/;"	f
@@ -1096,10 +1096,10 @@ regression	./lib_stats.c	/^regression(double *x, double *y, double *sig, int n,$
 regroup	./lat_dram_page.c	/^regroup(size_t* pages, int groupsize, void* cookie)$/;"	f
 release	./lat_fcntl.c	33;"	d	file:
 remove_chunk	./cache.c	/^remove_chunk(size_t i, size_t chunk, size_t npages, size_t* pages, $/;"	f
-repetitions	./lib_timing.c	/^        int		repetitions;$/;"	m	struct:__anon5	file:
-response	./lib_timing.c	/^	int		response;$/;"	m	struct:__anon5	file:
-result_signal	./lib_timing.c	/^	int		result_signal;$/;"	m	struct:__anon5	file:
-result_t	./bench.h	/^} result_t;$/;"	t	typeref:struct:__anon2
+repetitions	./lib_timing.c	/^        int		repetitions;$/;"	m	struct:__anon2	file:
+response	./lib_timing.c	/^	int		response;$/;"	m	struct:__anon2	file:
+result_signal	./lib_timing.c	/^	int		result_signal;$/;"	m	struct:__anon2	file:
+result_t	./bench.h	/^} result_t;$/;"	t	typeref:struct:__anon4
 results	./lib_timing.c	/^static result_t* results = &_results;$/;"	v	file:
 reverse_bits	./lib_sched.c	/^reverse_bits(int cpu)$/;"	f
 revision	./clock.c	/^char	*revision = "$Revision$";$/;"	v
@@ -1168,9 +1168,9 @@ source	./lmhttp.c	/^source(int sock)$/;"	f
 srand48	./bench.h	155;"	d
 srand48	./bench.h	158;"	d
 start	./lib_timing.c	/^start(struct timeval *tv)$/;"	f
-start_signal	./lib_timing.c	/^	int		start_signal;$/;"	m	struct:__anon5	file:
+start_signal	./lib_timing.c	/^	int		start_signal;$/;"	m	struct:__anon2	file:
 start_tv	./lib_timing.c	/^static struct timeval 	start_tv, stop_tv;$/;"	v	typeref:struct:timeval	file:
-state	./lib_timing.c	/^	benchmp_state	state;$/;"	m	struct:__anon5	file:
+state	./lib_timing.c	/^	benchmp_state	state;$/;"	m	struct:__anon2	file:
 state_	./lat_rpc.c	/^typedef struct state_ {$/;"	s	file:
 state_t	./bw_file_rd.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
 state_t	./bw_mem.c	/^} state_t;$/;"	t	typeref:struct:_state	file:
@@ -1214,10 +1214,10 @@ time_with_open	./bw_file_rd.c	/^time_with_open(iter_t iterations, void * cookie)
 time_with_open	./bw_mmap_rd.c	/^time_with_open(iter_t iterations, void *cookie)$/;"	f
 timeit	./memsize.c	/^timeit(char *where, size_t size)$/;"	f
 timeout	./lat_udp.c	/^timeout()$/;"	f
-timer_e	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	t	typeref:enum:__anon3	file:
+timer_e	./lat_usleep.c	/^typedef     enum {USLEEP, NANOSLEEP, SELECT, PSELECT, ITIMER} timer_e;$/;"	t	typeref:enum:__anon5	file:
 timespent	./lib_timing.c	/^timespent(void)$/;"	f
 timing	./lib_timing.c	/^timing(FILE *out)$/;"	f
-timing_interval	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+timing_interval	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon1	file:
 tlb_cleanup	./lib_mem.c	/^tlb_cleanup(iter_t iterations, void* cookie)$/;"	f
 tlb_initialize	./lib_mem.c	/^tlb_initialize(iter_t iterations, void* cookie)$/;"	f
 tmpdir	./lat_fs.c	/^	char	*tmpdir;$/;"	m	struct:_state	file:
@@ -1228,7 +1228,7 @@ tvdelta	./lib_timing.c	/^tvdelta(struct timeval *start, struct timeval *stop)$/;
 tvsub	./lib_timing.c	/^tvsub(struct timeval * tdiff, struct timeval * t1, struct timeval * t0)$/;"	f
 two_op	./lib_timing.c	/^two_op(register long *p)$/;"	f	file:
 type	./lmhttp.c	/^type(char *name)$/;"	f
-u	./bench.h	/^	uint64 u;$/;"	m	struct:__anon1
+u	./bench.h	/^	uint64 u;$/;"	m	struct:__anon3
 udp_connect	./lib_udp.c	/^udp_connect(char *host, u_long prog, int rdwr)$/;"	f
 udp_done	./lib_udp.c	/^udp_done(u_long prog)$/;"	f
 udp_server	./lib_udp.c	/^udp_server(u_long prog, int rdwr)$/;"	f
@@ -1257,12 +1257,12 @@ use_int	./lib_timing.c	/^use_int(int result) { use_result_dummy += result; }$/;"
 use_pointer	./lib_timing.c	/^use_pointer(void *result) { use_result_dummy += (long)result; }$/;"	f
 use_result_dummy	./lib_timing.c	/^static volatile uint64	use_result_dummy;$/;"	v	file:
 usecs	./lat_usleep.c	/^    unsigned long usecs;$/;"	m	struct:_state	file:
-v	./bench.h	/^	value_t	v[TRIES];$/;"	m	struct:__anon2
+v	./bench.h	/^	value_t	v[TRIES];$/;"	m	struct:__anon4
 value	./lat_usleep.c	/^struct itimerval value;$/;"	v	typeref:struct:itimerval
-value_t	./bench.h	/^} value_t;$/;"	t	typeref:struct:__anon1
+value_t	./bench.h	/^} value_t;$/;"	t	typeref:struct:__anon3
 variation	./cache.c	/^	double	variation;$/;"	m	struct:cache_results	file:
 waiton	./lat_fcntl.c	32;"	d	file:
-warmup	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon4	file:
+warmup	./lib_timing.c	/^typedef enum { warmup, timing_interval, cooldown } benchmp_state;$/;"	e	enum:__anon1	file:
 warning	./lmdd.c	/^warning(char *s)$/;"	f
 where	./lat_pagefault.c	/^	char* where;$/;"	m	struct:_state	file:
 where	./lat_sig.c	/^	char*	where;$/;"	m	struct:_state	file:

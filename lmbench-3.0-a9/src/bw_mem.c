@@ -56,6 +56,7 @@ typedef struct _state {
 
 void	adjusted_bandwidth(uint64 t, uint64 b, uint64 iter, double ovrhd);
 
+#ifdef FOR_MAMBO
 int
 main(int ac, char **av)
 {
@@ -65,7 +66,7 @@ main(int ac, char **av)
 	size_t	nbytes;
 	state_t	state;
 	int	c;
-	char	*usage = "[-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512";
+	char	*usage = "[-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512\n";
 
 	state.overhead = 0;
 
@@ -133,14 +134,101 @@ main(int ac, char **av)
 	}
 	adjusted_bandwidth(gettime(), nbytes, 
 			   get_n() * parallel, state.overhead);
+	return (0);
+}
+
+#else
+int
+main(int ac, char **av)
+{
+	int	parallel = 1;
+	int	warmup = 0;
+	int	repetitions = -1;
+	size_t	nbytes;
+	state_t	state;
+	int	c;
+	char	*usage = "[-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512";
+
+	state.overhead = 0;
+
+	while (( c = getopt(ac, av, "P:W:N:")) != EOF) {
+		switch(c) {
+		case 'P':
+			parallel = atoi(optarg);
+			if (parallel <= 0) lmbench_usage(ac, av, usage);
+			break;
+		case 'W':
+			warmup = atoi(optarg);
+			break;
+		case 'N':
+			repetitions = atoi(optarg);
+			break;
+		default:
+			lmbench_usage(ac, av, usage);
+			break;
+		}
+	}
+
+	/* should have two, possibly three [indicates align] arguments left */
+	state.aligned = state.need_buf2 = 0;
+	if (optind + 3 == ac) {
+		state.aligned = 1;
+	} else if (optind + 2 != ac) {
+		lmbench_usage(ac, av, usage);
+	}
+
+	nbytes = state.nbytes = bytes(av[optind]);
+	if (state.nbytes < 512) { /* this is the number of bytes in the loop */
+		lmbench_usage(ac, av, usage);
+	}
+
+	if (streq(av[optind+1], "cp") ||
+	    streq(av[optind+1], "fcp") || streq(av[optind+1], "bcopy")) {
+		state.need_buf2 = 1;
+	}
+		
+	if (streq(av[optind+1], "rd")) {
+		benchmp(init_loop, rd, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "wr")) {
+		benchmp(init_loop, wr, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "rdwr")) {
+		benchmp(init_loop, rdwr, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "cp")) {
+		benchmp(init_loop, mcp, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "frd")) {
+		benchmp(init_loop, frd, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "fwr")) {
+		benchmp(init_loop, fwr, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "fcp")) {
+		benchmp(init_loop, fcp, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "bzero")) {
+		benchmp(init_loop, loop_bzero, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "bcopy")) {
+		benchmp(init_loop, loop_bcopy, cleanup, 0, parallel, 
+			warmup, repetitions, &state);
+	} else {
+		lmbench_usage(ac, av, usage);
+	}
+	adjusted_bandwidth(gettime(), nbytes, 
+			   get_n() * parallel, state.overhead);
 	return(0);
 }
+#endif
 
 void
 init_overhead(iter_t iterations, void *cookie)
 {
 }
 
+#ifdef FOR_MAMBO
 void
 init_loop(iter_t iterations, void *cookie)
 {
@@ -148,10 +236,8 @@ init_loop(iter_t iterations, void *cookie)
 
 	if (iterations) return;
 
-	/* modify by shixing */
 	TYPE buf_tmp[state->nbytes];
 	state->buf = buf_tmp;
-//        state->buf = (TYPE *)valloc(state->nbytes);
 	state->buf2_orig = NULL;
 	state->lastone = (TYPE*)state->buf - 1;
 	state->lastone = (TYPE*)((char *)state->buf + state->nbytes - 512);
@@ -164,10 +250,8 @@ init_loop(iter_t iterations, void *cookie)
 	bzero((void*)state->buf, state->nbytes);
 
 	if (state->need_buf2 == 1) {
-		/* modify by shixing */
 		TYPE buf_tmp2[state->nbytes + 2048];
-		state->buf_tmp2 = buf_tmp2;
-//		state->buf2_orig = state->buf2 = (TYPE *)valloc(state->nbytes + 2048);
+		state->buf2_orig = state->buf2 = buf_tmp2;
 		if (!state->buf2) {
 			perror("malloc");
 			exit(1);
@@ -183,6 +267,44 @@ init_loop(iter_t iterations, void *cookie)
 		}
 	}
 }
+#else
+void
+init_loop(iter_t iterations, void *cookie)
+{
+	state_t *state = (state_t *) cookie;
+
+	if (iterations) return;
+
+        state->buf = (TYPE *)valloc(state->nbytes);
+	state->buf2_orig = NULL;
+	state->lastone = (TYPE*)state->buf - 1;
+	state->lastone = (TYPE*)((char *)state->buf + state->nbytes - 512);
+	state->N = state->nbytes;
+
+	if (!state->buf) {
+		perror("malloc");
+		exit(1);
+	}
+	bzero((void*)state->buf, state->nbytes);
+
+	if (state->need_buf2 == 1) {
+		state->buf2_orig = state->buf2 = (TYPE *)valloc(state->nbytes + 2048);
+		if (!state->buf2) {
+			perror("malloc");
+			exit(1);
+		}
+
+		/* default is to have stuff unaligned wrt each other */
+		/* XXX - this is not well tested or thought out */
+		if (state->aligned) {
+			char	*tmp = (char *)state->buf2;
+
+			tmp += 2048 - 128;
+			state->buf2 = (TYPE *)tmp;
+		}
+	}
+}
+#endif
 
 void
 cleanup(iter_t iterations, void *cookie)
@@ -191,8 +313,8 @@ cleanup(iter_t iterations, void *cookie)
 
 	if (iterations) return;
 
-//	free(state->buf);
-//	if (state->buf2_orig) free(state->buf2_orig);
+	free(state->buf);
+	if (state->buf2_orig) free(state->buf2_orig);
 }
 
 void

@@ -10,6 +10,8 @@
  * (2) the version in the sccsid below is included in the report.
  * Support for this development by Sun Microsystems is gratefully acknowledged.
  */
+
+/* add by shixing */
 char	*id = "$Id$";
 
 #include "bench.h"

@@ -10,8 +10,6 @@
  * (2) the version in the sccsid below is included in the report.
  * Support for this development by Sun Microsystems is gratefully acknowledged.
  */
-
-/* add by shixing */
 char	*id = "$Id$";
 
 #include "bench.h"
@@ -44,6 +42,7 @@ void	init_overhead(iter_t iterations, void *cookie);
 void	init_loop(iter_t iterations, void *cookie);
 void	cleanup(iter_t iterations, void *cookie);
 
+#if 0
 typedef struct _state {
 	double	overhead;
 	size_t	nbytes;
@@ -58,88 +57,6 @@ typedef struct _state {
 
 void	adjusted_bandwidth(uint64 t, uint64 b, uint64 iter, double ovrhd);
 
-#ifdef FOR_MAMBO
-int
-main(int ac, char **av)
-{
-	int	parallel = 1;
-	int	warmup = 0;
-	int	repetitions = -1;
-	size_t	nbytes;
-	state_t	state;
-	int	c;
-	char	*usage = "[-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512\n";
-
-	state.overhead = 0;
-
-	while (( c = getopt(ac, av, "W:N:")) != EOF) {
-		switch(c) {
-		case 'W':
-			warmup = atoi(optarg);
-			break;
-		case 'N':
-			repetitions = atoi(optarg);
-			break;
-		default:
-			lmbench_usage(ac, av, usage);
-			break;
-		}
-	}
-
-	/* should have two, possibly three [indicates align] arguments left */
-	state.aligned = state.need_buf2 = 0;
-	if (optind + 3 == ac) {
-		state.aligned = 1;
-	} else if (optind + 2 != ac) {
-		lmbench_usage(ac, av, usage);
-	}
-
-	nbytes = state.nbytes = bytes(av[optind]);
-	if (state.nbytes < 512) { /* this is the number of bytes in the loop */
-		lmbench_usage(ac, av, usage);
-	}
-
-	if (streq(av[optind+1], "cp") ||
-	    streq(av[optind+1], "fcp") || streq(av[optind+1], "bcopy")) {
-		state.need_buf2 = 1;
-	}
-		
-	if (streq(av[optind+1], "rd")) {
-		benchmp(init_loop, rd, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "wr")) {
-		benchmp(init_loop, wr, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "rdwr")) {
-		benchmp(init_loop, rdwr, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "cp")) {
-		benchmp(init_loop, mcp, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "frd")) {
-		benchmp(init_loop, frd, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "fwr")) {
-		benchmp(init_loop, fwr, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "fcp")) {
-		benchmp(init_loop, fcp, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "bzero")) {
-		benchmp(init_loop, loop_bzero, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "bcopy")) {
-		benchmp(init_loop, loop_bcopy, cleanup, 0, parallel, 
-			warmup, repetitions, &state);
-	} else {
-		lmbench_usage(ac, av, usage);
-	}
-	adjusted_bandwidth(gettime(), nbytes, 
-			   get_n() * parallel, state.overhead);
-	return (0);
-}
-
-#else
 int
 main(int ac, char **av)
 {
@@ -223,53 +140,12 @@ main(int ac, char **av)
 			   get_n() * parallel, state.overhead);
 	return(0);
 }
-#endif
 
 void
 init_overhead(iter_t iterations, void *cookie)
 {
 }
 
-#ifdef FOR_MAMBO
-void
-init_loop(iter_t iterations, void *cookie)
-{
-	state_t *state = (state_t *) cookie;
-
-	if (iterations) return;
-
-	TYPE buf_tmp[state->nbytes];
-	state->buf = buf_tmp;
-	state->buf2_orig = NULL;
-	state->lastone = (TYPE*)state->buf - 1;
-	state->lastone = (TYPE*)((char *)state->buf + state->nbytes - 512);
-	state->N = state->nbytes;
-
-	if (!state->buf) {
-		perror("malloc");
-		exit(1);
-	}
-	bzero((void*)state->buf, state->nbytes);
-
-	if (state->need_buf2 == 1) {
-		TYPE buf_tmp2[state->nbytes + 2048];
-		state->buf2_orig = state->buf2 = buf_tmp2;
-		if (!state->buf2) {
-			perror("malloc");
-			exit(1);
-		}
-
-		/* default is to have stuff unaligned wrt each other */
-		/* XXX - this is not well tested or thought out */
-		if (state->aligned) {
-			char	*tmp = (char *)state->buf2;
-
-			tmp += 2048 - 128;
-			state->buf2 = (TYPE *)tmp;
-		}
-	}
-}
-#else
 void
 init_loop(iter_t iterations, void *cookie)
 {
@@ -306,7 +182,6 @@ init_loop(iter_t iterations, void *cookie)
 		}
 	}
 }
-#endif
 
 void
 cleanup(iter_t iterations, void *cookie)
@@ -318,6 +193,128 @@ cleanup(iter_t iterations, void *cookie)
 	free(state->buf);
 	if (state->buf2_orig) free(state->buf2_orig);
 }
+#else //if MAMBO
+
+typedef struct _state {
+	size_t	nbytes;
+	int	need_buf2;
+	TYPE	*buf;
+	TYPE	*buf2;
+	TYPE	*buf2_orig;
+	TYPE	*lastone;
+	size_t	N;
+} state_t;
+
+int
+main(int ac, char **av)
+{
+	int	parallel = 1;
+	int	warmup = 0;
+	int	repetitions = -1;
+	size_t	nbytes;
+	state_t	state;
+	uint64  result = 0;
+	int	c;
+	char	*usage = "[-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512\n";
+
+	while (( c = getopt(ac, av, "W:N:")) != EOF) {
+		switch(c) {
+		case 'W':
+			warmup = atoi(optarg);
+			printf("warmup is %d.\n", warmup);
+			break;
+		case 'N':
+			repetitions = atoi(optarg);
+			printf("repetitions is %d.\n", repetitions);
+			break;
+		default:
+			lmbench_usage(ac, av, usage);
+			break;
+		}
+	}
+
+	if (optind + 2 != ac) {
+		lmbench_usage(ac, av, usage);
+	}
+	nbytes = state.nbytes = bytes(av[optind]);
+	printf("size is %zu.\n", nbytes);
+	if (state.nbytes < 512) { /* this is the number of bytes in the loop */
+		lmbench_usage(ac, av, usage);
+	}
+
+	if (streq(av[optind+1], "cp") ||
+	    streq(av[optind+1], "fcp") || streq(av[optind+1], "bcopy")) {
+		state.need_buf2 = 1;
+	}
+		
+	if (streq(av[optind+1], "rd")) {
+		benchmp_for_mambo(init_loop, rd, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "wr")) {
+		benchmp_for_mambo(init_loop, wr, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "rdwr")) {
+		benchmp_for_mambo(init_loop, rdwr, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "cp")) {
+		benchmp_for_mambo(init_loop, mcp, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "frd")) {
+		benchmp_for_mambo(init_loop, frd, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "fwr")) {
+		benchmp_for_mambo(init_loop, fwr, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "fcp")) {
+		benchmp_for_mambo(init_loop, fcp, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "bzero")) {
+		benchmp_for_mambo(init_loop, loop_bzero, &result,
+			warmup, repetitions, &state);
+	} else if (streq(av[optind+1], "bcopy")) {
+		benchmp_for_mambo(init_loop, loop_bcopy, &result,
+			warmup, repetitions, &state);
+	} else {
+		lmbench_usage(ac, av, usage);
+	}
+	printf("result = %u\n", result);
+	adjusted_bandwidth(result, nbytes, 
+			   repetitions);
+
+} /* End main */
+
+void
+init_loop(iter_t iterations, void *cookie)
+{
+	state_t *state = (state_t *) cookie;
+
+	if (iterations) return;
+
+//	TYPE buf_tmp[state->nbytes];
+//	state->buf = buf_tmp;
+        state->buf = (TYPE *)valloc(state->nbytes);
+	state->buf2_orig = NULL;
+	state->lastone = (TYPE*)state->buf - 1;
+	state->lastone = (TYPE*)((char *)state->buf + state->nbytes - 512);
+	state->N = state->nbytes;
+
+	if (!state->buf) {
+		perror("malloc");
+		exit(1);
+	}
+	bzero((void*)state->buf, state->nbytes);
+
+	if (state->need_buf2 == 1) {
+//        	TYPE buf_tmp2[state->nbytes + 2048];
+//        	state->buf2_orig = buf_tmp2;
+        	state->buf2_orig = state->buf2 = (TYPE *)valloc(state->nbytes + 2048);
+		if (!state->buf2) {
+			perror("malloc");
+			exit(1);
+		}
+	}
+}
+#endif //End if MAMBO
 
 void
 rd(iter_t iterations, void *cookie)
@@ -331,12 +328,16 @@ rd(iter_t iterations, void *cookie)
 	    while (p <= lastone) {
 		sum += 
 #define	DOIT(i)	p[i]+
+/*
 		DOIT(0) DOIT(4) DOIT(8) DOIT(12) DOIT(16) DOIT(20) DOIT(24)
 		DOIT(28) DOIT(32) DOIT(36) DOIT(40) DOIT(44) DOIT(48) DOIT(52)
 		DOIT(56) DOIT(60) DOIT(64) DOIT(68) DOIT(72) DOIT(76)
 		DOIT(80) DOIT(84) DOIT(88) DOIT(92) DOIT(96) DOIT(100)
 		DOIT(104) DOIT(108) DOIT(112) DOIT(116) DOIT(120) 
 		p[124];
+*/
+		DOIT(0) DOIT(16) DOIT(32) DOIT(48) DOIT(64) DOIT(80) DOIT(96)
+		p[112];
 		p +=  128;
 	    }
 	}
@@ -564,6 +565,32 @@ loop_bcopy(iter_t iterations, void *cookie)
  * Almost like bandwidth() in lib_timing.c, but we need to adjust
  * bandwidth based upon loop overhead.
  */
+#if 1
+void adjusted_bandwidth(uint64 time, uint64 bytes, int repetitions)
+{
+#define MB	(1000. * 1000.)
+	if (repetitions == -1)
+		repetitions = 11;
+	double secs = ((double)time / repetitions) / 1000000.0;
+	double mb;
+	
+        mb = bytes / MB;
+
+	if (secs <= 0.)
+		return;
+
+	if (mb < 1.) {
+		printf("%.6f mb ", mb);
+	} else {
+		printf("%.2f mb ", mb);
+	}
+	if (mb / secs < 1.) {
+		printf("%.6f mb/secs\n", mb/secs);
+	} else {
+		printf("%.2f mb/secs\n", mb/secs);
+	}
+}
+#else
 void adjusted_bandwidth(uint64 time, uint64 bytes, uint64 iter, double overhd)
 {
 #define MB	(1000. * 1000.)
@@ -588,5 +615,5 @@ void adjusted_bandwidth(uint64 time, uint64 bytes, uint64 iter, double overhd)
 		(void) fprintf(ftiming, "%.2f\n", mb/secs);
 	}
 }
-
+#endif //End MAMBO
 

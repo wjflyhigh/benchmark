@@ -149,6 +149,34 @@ benchmp_parent(int response,
 int
 sizeof_result(int repetitions);
 
+void
+benchmp_for_mambo(benchmp_f initialize,
+		  benchmp_f benchmark,
+		  uint64 *result,
+		  int warmup,
+		  int repetitions,
+		  void* cookie)
+{
+	uint64 time_used;
+	printf("Start to execute benchmp_for_mambo, args: warmup = %d, repetitions = %d.\n", warmup, repetitions);
+	if (repetitions <= 0)
+		repetitions = TRIES;
+	if (initialize)
+		(*initialize)(0, cookie);
+	if(warmup == 0){
+		(*benchmark)(1, cookie);
+	}
+	else {
+		(*benchmark)(warmup, cookie);
+	}
+
+	/* start to test */
+	start(&start_tv);
+	(*benchmark)(repetitions, cookie);
+	*result = time_used = stop(&start_tv, NULL);
+	printf("Time used is %u.\n", time_used);
+}
+
 void 
 benchmp(benchmp_f initialize, 
 	benchmp_f benchmark,
@@ -1197,7 +1225,7 @@ bytes(char *s)
 }
 
 void
-use_int(int result) { use_result_dummy += result; }
+use_int(int result) { use_result_dummy += result; printf("Sum is %ld.\n", use_result_dummy); }
 
 void
 use_pointer(void *result) { use_result_dummy += (long)result; }

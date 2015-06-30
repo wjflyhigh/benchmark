@@ -210,13 +210,25 @@ main(int ac, char **av)
 {
 	int	parallel = 1;
 	int	warmup = 0;
-	int	repetitions = -1;
+	int	repetitions = 1;
 	size_t	nbytes;
 	state_t	state;
 	uint64  result = 0;
+	int     i = 1;
 	int	c;
-	char	*usage = "[-W <warmup>] [-N <repetitions>] <size> what [conflict]\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512\n";
+	char	*usage = "[-W <warmup>] [-N <repetitions>] <size> what\nwhat: rd wr rdwr cp fwr frd fcp bzero bcopy\n<size> must be larger than 512\n";
 
+	if( strcmp(av[i],"-W") == 0 ) {
+		warmup = atoi(av[++i]);
+		printf("warmup is %d.\n", warmup);
+		i++;
+	}
+	if( strcmp(av[i], "-N") == 0 ) {
+		repetitions = atoi(av[++i]);
+		printf("repetitions is %d.\n", repetitions);
+		i++;
+	}
+/*
 	while (( c = getopt(ac, av, "W:N:")) != EOF) {
 		switch(c) {
 		case 'W':
@@ -236,42 +248,44 @@ main(int ac, char **av)
 	if (optind + 2 != ac) {
 		lmbench_usage(ac, av, usage);
 	}
-	nbytes = state.nbytes = bytes(av[optind]);
+*/
+	nbytes = state.nbytes = bytes(av[i]);
 	printf("size is %zu.\n", nbytes);
+	i = i + 1;
 	if (state.nbytes < 512) { /* this is the number of bytes in the loop */
 		lmbench_usage(ac, av, usage);
 	}
 
-	if (streq(av[optind+1], "cp") ||
-	    streq(av[optind+1], "fcp") || streq(av[optind+1], "bcopy")) {
+	if (streq(av[i], "cp") ||
+	    streq(av[i], "fcp") || streq(av[i], "bcopy")) {
 		state.need_buf2 = 1;
 	}
 		
-	if (streq(av[optind+1], "rd")) {
+	if (streq(av[i], "rd")) {
 		benchmp_for_mambo(init_loop, rd, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "wr")) {
+	} else if (streq(av[i], "wr")) {
 		benchmp_for_mambo(init_loop, wr, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "rdwr")) {
+	} else if (streq(av[i], "rdwr")) {
 		benchmp_for_mambo(init_loop, rdwr, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "cp")) {
+	} else if (streq(av[i], "cp")) {
 		benchmp_for_mambo(init_loop, mcp, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "frd")) {
+	} else if (streq(av[i], "frd")) {
 		benchmp_for_mambo(init_loop, frd, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "fwr")) {
+	} else if (streq(av[i], "fwr")) {
 		benchmp_for_mambo(init_loop, fwr, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "fcp")) {
+	} else if (streq(av[i], "fcp")) {
 		benchmp_for_mambo(init_loop, fcp, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "bzero")) {
+	} else if (streq(av[i], "bzero")) {
 		benchmp_for_mambo(init_loop, loop_bzero, &result,
 			warmup, repetitions, &state);
-	} else if (streq(av[optind+1], "bcopy")) {
+	} else if (streq(av[i], "bcopy")) {
 		benchmp_for_mambo(init_loop, loop_bcopy, &result,
 			warmup, repetitions, &state);
 	} else {

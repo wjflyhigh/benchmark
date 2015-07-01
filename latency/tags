@@ -1,0 +1,82 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAP_HUGETLB	./lat1.c	333;"	d	file:
+MAP_HUGETLB	./lat2.c	256;"	d	file:
+MAP_HUGETLB	./lat3.c	295;"	d	file:
+MIN_ITS	./lat1.c	27;"	d	file:
+MIN_ITS	./lat2.c	29;"	d	file:
+MIN_ITS	./lat3.c	37;"	d	file:
+NEXTARG	./lat1.c	263;"	d	file:
+NEXTARG	./lat2.c	206;"	d	file:
+NEXTARG	./lat3.c	223;"	d	file:
+SPEED	./lat1.c	29;"	d	file:
+SPEED	./lat2.c	30;"	d	file:
+SPEED	./lat3.c	39;"	d	file:
+TEST_DTLB	./lat1.c	/^	TEST_DTLB$/;"	e	enum:_tests	file:
+TEST_RANDLAT	./lat1.c	/^	TEST_RANDLAT = 0,$/;"	e	enum:_tests	file:
+TEST_RANDLAT	./lat2.c	/^	TEST_RANDLAT = 0$/;"	e	enum:_tests	file:
+TEST_RANDLAT	./lat3.c	/^	TEST_RANDLAT = 0$/;"	e	enum:_tests	file:
+_options	./lat1.c	/^struct _options$/;"	s	file:
+_options	./lat2.c	/^struct _options$/;"	s	file:
+_options	./lat3.c	/^struct _options$/;"	s	file:
+_tests	./lat1.c	/^enum _tests {$/;"	g	file:
+_tests	./lat2.c	/^enum _tests {$/;"	g	file:
+_tests	./lat3.c	/^enum _tests {$/;"	g	file:
+array	./lat1.c	/^void **array;$/;"	v
+array	./lat2.c	/^void **array;$/;"	v
+array	./lat3.c	/^void **array;$/;"	v
+cycle_len	./lat1.c	/^	int cycle_len;$/;"	m	struct:_options	file:
+cycle_len	./lat2.c	/^	int cycle_len;$/;"	m	struct:_options	file:
+cycle_len	./lat3.c	/^	int cycle_len;$/;"	m	struct:_options	file:
+dummy	./lat1.c	/^void * dummy;$/;"	v
+dummy	./lat2.c	/^void * dummy;$/;"	v
+dummy	./lat3.c	/^void * dummy;$/;"	v
+hugetlb	./lat1.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
+hugetlb	./lat2.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
+hugetlb	./lat3.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
+main	./lat1.c	/^int main(int argc, char ** argv)$/;"	f
+main	./lat2.c	/^int main(int argc, char ** argv)$/;"	f
+main	./lat3.c	/^int main(int argc, char ** argv)$/;"	f
+my_rand	./lat1.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
+my_rand	./lat2.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
+my_rand	./lat3.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
+offset_mode	./lat1.c	/^	bool offset_mode;$/;"	m	struct:_options	file:
+offset_mode	./lat3.c	/^	bool offset_mode;$/;"	m	struct:_options	file:
+opts	./lat1.c	/^} opts;$/;"	v	typeref:struct:_options
+opts	./lat2.c	/^} opts;$/;"	v	typeref:struct:_options
+opts	./lat3.c	/^} opts;$/;"	v	typeref:struct:_options
+parse_args	./lat1.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
+parse_args	./lat2.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
+parse_args	./lat3.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
+pos	./lat1.c	/^void *pos = 0;$/;"	v
+pos	./lat3.c	/^void *pos = 0, *pos2 = 0;;$/;"	v
+pos2	./lat3.c	/^void *pos = 0, *pos2 = 0;;$/;"	v
+random_offset_mode	./lat1.c	/^	bool random_offset_mode;$/;"	m	struct:_options	file:
+random_offset_mode	./lat3.c	/^	bool random_offset_mode;$/;"	m	struct:_options	file:
+rdtsc	./lat1.c	/^inline unsigned long long int rdtsc()$/;"	f
+rdtsc	./lat2.c	/^inline unsigned long long int rdtsc()$/;"	f
+rdtsc	./lat3.c	/^inline unsigned long long int rdtsc()$/;"	f
+rrip_mode	./lat3.c	/^	bool rrip_mode;$/;"	m	struct:_options	file:
+run_dtlb	./lat1.c	/^static double run_dtlb(long long size, int ITS)$/;"	f	file:
+run_randlat	./lat1.c	/^static double run_randlat(long long size, int ITS)$/;"	f	file:
+run_randlat	./lat2.c	/^static double run_randlat(long long size, int ITS)$/;"	f	file:
+run_randlat	./lat3.c	/^static double run_randlat(long long size, long long size2, int ITS)$/;"	f	file:
+runtest	./lat1.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
+runtest	./lat2.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
+runtest	./lat3.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
+sizelimit	./lat1.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
+sizelimit	./lat2.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
+sizelimit	./lat3.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
+sizelimit2	./lat3.c	/^	long long sizelimit2;$/;"	m	struct:_options	file:
+start_offset	./lat1.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+start_offset	./lat3.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+stepahead	./lat2.c	/^	int stepahead;$/;"	m	struct:_options	file:
+stop_offset	./lat1.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+stop_offset	./lat3.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+test	./lat1.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
+test	./lat2.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
+test	./lat3.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:

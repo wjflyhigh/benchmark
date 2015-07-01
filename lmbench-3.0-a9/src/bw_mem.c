@@ -350,8 +350,13 @@ rd(iter_t iterations, void *cookie)
 		DOIT(104) DOIT(108) DOIT(112) DOIT(116) DOIT(120) 
 		p[124];
 */
+/* for cache line 64B
 		DOIT(0) DOIT(16) DOIT(32) DOIT(48) DOIT(64) DOIT(80) DOIT(96)
 		p[112];
+*/
+/* for cache line 128B */
+		DOIT(0)  DOIT(32)  DOIT(64)
+		p[96];
 		p +=  128;
 	    }
 	}

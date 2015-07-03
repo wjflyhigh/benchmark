@@ -4,7 +4,7 @@ import sys
 import re
 import argparse
 import commands
-from multiprocessing import Process
+from multiprocessing import Process, Manager
 
 def Color_Print(color,*params):
     pList = []
@@ -49,6 +49,7 @@ def runCommand(curCommand):
     #TODO: confirm the output ends with "xxxx mb xxxxx mb/secs"
     curResult = commands.getoutput(curCommand).split('\n')[-1].split()[2]
     print 'curResult=[%s]' % curResult
+    mylist.append(curResult)
 
 def RunACommandManyTimes(func, arg, runTimes):
     proc_record = []
@@ -130,6 +131,12 @@ else:
 
 ### 'warmup is 3.\nrepetitions is 100.\nsize is 4000000000.\nStart to execute benchmp_for_mambo, args: warmup = 3, repetitions = 100.\nSum is 0.\nSum is 0.\nTime used is 28830817.\nresult = 28830817\n4000.00 mb 13874.04 mb/secs'
 
+#allmylist = []
 for curCommand in allCommandList:
+    mylist = []
+    manager = Manager()
+    mylist = manager.list()
     RunACommandManyTimes(runCommand, curCommand, int(timeForRun))
+    Color_Print('green', 'SUM==[%s]' % sum([float(i) for i in list(mylist)]))
+    #allmylist.append(list(mylist))
 

@@ -61,7 +61,7 @@ int main()
 		
 	
 		i = 1;
-		tmp = (void*)*(long*)array[0];
+		tmp = array[0];
 		array_check[0] = tmp;
 		while(i < array_size) // check no loop in the array[]
 		{

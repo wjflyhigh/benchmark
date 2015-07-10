@@ -15,6 +15,11 @@
 #include <errno.h>
 #include <stdint.h>
 
+<<<<<<< HEAD
+=======
+#define POWER8
+#ifdef POWER8
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 #define mftbl() ({uint32_t rval;   \
 		asm volatile("mftbl %0" : "=r" (rval)); rval;})
 #define mftbu() ({uint32_t rval;   \
@@ -51,7 +56,11 @@ double get_nanosecs(struct time_base *start, struct time_base *end)
 
 	return ((tb_end - tb_start)*1e3/512.000);
 }
+<<<<<<< HEAD
 
+=======
+#else
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 inline unsigned long long int rdtsc()
 {
 	unsigned int lo, hi;
@@ -59,6 +68,10 @@ inline unsigned long long int rdtsc()
 	__asm__ volatile (".byte 0x0f, 0x31" : "=a" (lo), "=d" (hi));
 	return (long long)(((unsigned long long)hi)<<32LL) | (unsigned long long) lo;
 }
+<<<<<<< HEAD
+=======
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 
 void **array;
 void * dummy;
@@ -95,7 +108,11 @@ static double run_randlat(long long size, int ITS)
 {
 	static long long last_size = 1;
 	static bool fastmode = false;\
+<<<<<<< HEAD
 	struct time_base lastsec, sec0, sec1; /* timing variables */
+=======
+	struct time_base sec0, sec1; /* timing variables */
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 
 	if (!pos) pos = &array[opts.start_offset];
 
@@ -131,8 +148,16 @@ static double run_randlat(long long size, int ITS)
 		register void* j = pos;
 		putchar (' '); fflush(stdout);
 
+<<<<<<< HEAD
 //		long long start = rdtsc();
 		get_tb(&sec0); /* start timer */
+=======
+#ifdef POWER8
+		get_tb(&sec0); /* start timer */
+#else
+		long long start = rdtsc();
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		for (int i=ITS;i;i--)
 		{
 			j = *(void**)j;
@@ -152,10 +177,20 @@ static double run_randlat(long long size, int ITS)
 			j = *(void**)j;
 			j = *(void**)j;			
 		}	
+<<<<<<< HEAD
 		get_tb(&sec1); /* end timer */
 //		long long stop = rdtsc();
 //		clocks_per_it =  (double)(stop-start)/(ITS*16);
 		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
+=======
+#ifdef POWER8
+		get_tb(&sec1); /* end timer */
+		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
+#else
+		long long stop = rdtsc();
+		clocks_per_it =  (double)(stop-start)/(ITS*16);
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		pos = j;
 	}
 	else
@@ -167,7 +202,15 @@ static double run_randlat(long long size, int ITS)
 			addrs[i] = array + my_rand(size);
 		putchar (' '); fflush(stdout);
 
+<<<<<<< HEAD
 		long long start = rdtsc();
+=======
+#ifdef POWER8
+		get_tb(&sec0); /* start timer */
+#else
+		long long start = rdtsc();
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		
 		register long long j = 0;
 		for (int i=(MIN_ITS-1)*16;i>=0;i-=16)
@@ -190,8 +233,18 @@ static double run_randlat(long long size, int ITS)
 			j &= *(long long*)addrs[i+15+j];
 		}	
 		
+<<<<<<< HEAD
 		long long stop = rdtsc();
 		clocks_per_it =  (double)(stop-start)/(MIN_ITS*16);
+=======
+#ifdef POWER8
+		get_tb(&sec1); /* end timer */
+		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
+#else
+		long long stop = rdtsc();
+		clocks_per_it =  (double)(stop-start)/(ITS*16);
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		dummy = (void*)j;
 	}
 
@@ -213,6 +266,10 @@ static double run_randlat(long long size, int ITS)
 static double run_dtlb(long long size, int ITS)
 {
 	static long long last_size = 1;
+<<<<<<< HEAD
+=======
+	struct time_base sec0, sec1; /* timing variables */
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 
 	double clocks_per_it;
 	
@@ -251,7 +308,15 @@ static double run_dtlb(long long size, int ITS)
 	
 	putchar (' '); fflush(stdout);
 
+<<<<<<< HEAD
 	long long start = rdtsc();
+=======
+#ifdef POWER8
+		get_tb(&sec0); /* start timer */
+#else
+		long long start = rdtsc();
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 	
 	for (int i=ITS;i;i--)
 	{
@@ -273,8 +338,18 @@ static double run_dtlb(long long size, int ITS)
 		j = *(void**)j;			
 	}	
 	
+<<<<<<< HEAD
 	long long stop = rdtsc();
 	clocks_per_it =  (double)(stop-start)/(ITS*16);
+=======
+#ifdef POWER8
+		get_tb(&sec1); /* end timer */
+		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
+#else
+		long long stop = rdtsc();
+		clocks_per_it =  (double)(stop-start)/(ITS*16);
+#endif
+>>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 	dummy = j;
 
 	last_size = size;

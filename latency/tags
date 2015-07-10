@@ -7,76 +7,128 @@
 MAP_HUGETLB	./lat1.c	333;"	d	file:
 MAP_HUGETLB	./lat2.c	256;"	d	file:
 MAP_HUGETLB	./lat3.c	295;"	d	file:
+MAP_HUGETLB	./lat_power8.c	375;"	d	file:
 MIN_ITS	./lat1.c	27;"	d	file:
 MIN_ITS	./lat2.c	29;"	d	file:
 MIN_ITS	./lat3.c	37;"	d	file:
+MIN_ITS	./lat_power8.c	66;"	d	file:
 NEXTARG	./lat1.c	263;"	d	file:
 NEXTARG	./lat2.c	206;"	d	file:
 NEXTARG	./lat3.c	223;"	d	file:
+NEXTARG	./lat_power8.c	305;"	d	file:
 SPEED	./lat1.c	29;"	d	file:
 SPEED	./lat2.c	30;"	d	file:
 SPEED	./lat3.c	39;"	d	file:
+SPEED	./lat_power8.c	68;"	d	file:
 TEST_DTLB	./lat1.c	/^	TEST_DTLB$/;"	e	enum:_tests	file:
+TEST_DTLB	./lat_power8.c	/^	TEST_DTLB$/;"	e	enum:_tests	file:
 TEST_RANDLAT	./lat1.c	/^	TEST_RANDLAT = 0,$/;"	e	enum:_tests	file:
 TEST_RANDLAT	./lat2.c	/^	TEST_RANDLAT = 0$/;"	e	enum:_tests	file:
 TEST_RANDLAT	./lat3.c	/^	TEST_RANDLAT = 0$/;"	e	enum:_tests	file:
+TEST_RANDLAT	./lat_power8.c	/^	TEST_RANDLAT = 0,$/;"	e	enum:_tests	file:
+TYPE	./check_round.c	3;"	d	file:
+TYPE	./latency.c	3;"	d	file:
+TYPE	./latency_cacheline.c	3;"	d	file:
 _options	./lat1.c	/^struct _options$/;"	s	file:
 _options	./lat2.c	/^struct _options$/;"	s	file:
 _options	./lat3.c	/^struct _options$/;"	s	file:
+_options	./lat_power8.c	/^struct _options$/;"	s	file:
 _tests	./lat1.c	/^enum _tests {$/;"	g	file:
 _tests	./lat2.c	/^enum _tests {$/;"	g	file:
 _tests	./lat3.c	/^enum _tests {$/;"	g	file:
+_tests	./lat_power8.c	/^enum _tests {$/;"	g	file:
 array	./lat1.c	/^void **array;$/;"	v
 array	./lat2.c	/^void **array;$/;"	v
 array	./lat3.c	/^void **array;$/;"	v
+array	./lat_power8.c	/^void **array;$/;"	v
+array_subscript	./check_round.c	/^int array_subscript = 0;$/;"	v
+array_subscript	./latency.c	/^int array_subscript = 0;$/;"	v
+array_subscript	./latency_cacheline.c	/^int array_subscript;$/;"	v
 cycle_len	./lat1.c	/^	int cycle_len;$/;"	m	struct:_options	file:
 cycle_len	./lat2.c	/^	int cycle_len;$/;"	m	struct:_options	file:
 cycle_len	./lat3.c	/^	int cycle_len;$/;"	m	struct:_options	file:
+cycle_len	./lat_power8.c	/^	int cycle_len;$/;"	m	struct:_options	file:
 dummy	./lat1.c	/^void * dummy;$/;"	v
 dummy	./lat2.c	/^void * dummy;$/;"	v
 dummy	./lat3.c	/^void * dummy;$/;"	v
+dummy	./lat_power8.c	/^void * dummy;$/;"	v
+exchange_element	./check_round.c	/^void exchange_element(TYPE *array, int k, int j)$/;"	f
+exchange_element	./latency.c	/^void exchange_element(TYPE *array, TYPE k, TYPE j)$/;"	f
+exchange_element	./latency_cacheline.c	/^void exchange_element(TYPE *array, TYPE k, TYPE j)$/;"	f
+find_one_noloop_element	./check_round.c	/^int find_one_noloop_element(TYPE* array, TYPE* array_check, int array_size, int array_check_num)$/;"	f
+find_one_noloop_element	./latency.c	/^TYPE find_one_noloop_element(TYPE* array, TYPE* array_check, int array_size, int array_check_num)$/;"	f
+find_one_noloop_element	./latency_cacheline.c	/^TYPE find_one_noloop_element(TYPE* array, TYPE* array_check, int cycle_length, int array_size, int array_check_num, int row_num)$/;"	f
+get_nanosecs	./lat_power8.c	/^double get_nanosecs(struct time_base *start, struct time_base *end)$/;"	f
+get_tb	./lat_power8.c	/^void inline get_tb(struct time_base *tb)$/;"	f
 hugetlb	./lat1.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
 hugetlb	./lat2.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
 hugetlb	./lat3.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
+hugetlb	./lat_power8.c	/^	bool hugetlb;$/;"	m	struct:_options	file:
+main	./check_round.c	/^int main()$/;"	f
 main	./lat1.c	/^int main(int argc, char ** argv)$/;"	f
 main	./lat2.c	/^int main(int argc, char ** argv)$/;"	f
 main	./lat3.c	/^int main(int argc, char ** argv)$/;"	f
+main	./lat_power8.c	/^int main(int argc, char ** argv)$/;"	f
+main	./latency.c	/^int main()$/;"	f
+main	./latency_cacheline.c	/^int main()$/;"	f
+main	./test.c	/^int main()$/;"	f
+mftbl	./lat_power8.c	18;"	d	file:
+mftbu	./lat_power8.c	20;"	d	file:
+my_rand	./check_round.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
 my_rand	./lat1.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
 my_rand	./lat2.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
 my_rand	./lat3.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
+my_rand	./lat_power8.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
+my_rand	./latency_cacheline.c	/^static inline unsigned long long my_rand (unsigned long long limit)$/;"	f	file:
 offset_mode	./lat1.c	/^	bool offset_mode;$/;"	m	struct:_options	file:
 offset_mode	./lat3.c	/^	bool offset_mode;$/;"	m	struct:_options	file:
+offset_mode	./lat_power8.c	/^	bool offset_mode;$/;"	m	struct:_options	file:
 opts	./lat1.c	/^} opts;$/;"	v	typeref:struct:_options
 opts	./lat2.c	/^} opts;$/;"	v	typeref:struct:_options
 opts	./lat3.c	/^} opts;$/;"	v	typeref:struct:_options
+opts	./lat_power8.c	/^} opts;$/;"	v	typeref:struct:_options
 parse_args	./lat1.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
 parse_args	./lat2.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
 parse_args	./lat3.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
+parse_args	./lat_power8.c	/^void parse_args (int argc, char ** argv, struct _options &opts)$/;"	f
 pos	./lat1.c	/^void *pos = 0;$/;"	v
 pos	./lat3.c	/^void *pos = 0, *pos2 = 0;;$/;"	v
+pos	./lat_power8.c	/^void *pos = 0;$/;"	v
 pos2	./lat3.c	/^void *pos = 0, *pos2 = 0;;$/;"	v
 random_offset_mode	./lat1.c	/^	bool random_offset_mode;$/;"	m	struct:_options	file:
 random_offset_mode	./lat3.c	/^	bool random_offset_mode;$/;"	m	struct:_options	file:
+random_offset_mode	./lat_power8.c	/^	bool random_offset_mode;$/;"	m	struct:_options	file:
 rdtsc	./lat1.c	/^inline unsigned long long int rdtsc()$/;"	f
 rdtsc	./lat2.c	/^inline unsigned long long int rdtsc()$/;"	f
 rdtsc	./lat3.c	/^inline unsigned long long int rdtsc()$/;"	f
+rdtsc	./lat_power8.c	/^inline unsigned long long int rdtsc()$/;"	f
 rrip_mode	./lat3.c	/^	bool rrip_mode;$/;"	m	struct:_options	file:
 run_dtlb	./lat1.c	/^static double run_dtlb(long long size, int ITS)$/;"	f	file:
+run_dtlb	./lat_power8.c	/^static double run_dtlb(long long size, int ITS)$/;"	f	file:
 run_randlat	./lat1.c	/^static double run_randlat(long long size, int ITS)$/;"	f	file:
 run_randlat	./lat2.c	/^static double run_randlat(long long size, int ITS)$/;"	f	file:
 run_randlat	./lat3.c	/^static double run_randlat(long long size, long long size2, int ITS)$/;"	f	file:
+run_randlat	./lat_power8.c	/^static double run_randlat(long long size, int ITS)$/;"	f	file:
 runtest	./lat1.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
 runtest	./lat2.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
 runtest	./lat3.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
+runtest	./lat_power8.c	/^static double runtest(struct _options opts, int size, int ITS)$/;"	f	file:
 sizelimit	./lat1.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
 sizelimit	./lat2.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
 sizelimit	./lat3.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
+sizelimit	./lat_power8.c	/^	long long sizelimit;$/;"	m	struct:_options	file:
 sizelimit2	./lat3.c	/^	long long sizelimit2;$/;"	m	struct:_options	file:
 start_offset	./lat1.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
 start_offset	./lat3.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+start_offset	./lat_power8.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
 stepahead	./lat2.c	/^	int stepahead;$/;"	m	struct:_options	file:
 stop_offset	./lat1.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
 stop_offset	./lat3.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+stop_offset	./lat_power8.c	/^	unsigned long long start_offset, stop_offset;$/;"	m	struct:_options	file:
+tbl	./lat_power8.c	/^	uint32_t tbl;$/;"	m	struct:time_base	file:
+tbu	./lat_power8.c	/^	uint32_t tbu;$/;"	m	struct:time_base	file:
 test	./lat1.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
 test	./lat2.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
 test	./lat3.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
+test	./lat_power8.c	/^	enum _tests test;$/;"	m	struct:_options	typeref:enum:_options::_tests	file:
+time_base	./lat_power8.c	/^struct time_base {$/;"	s	file:

@@ -2,6 +2,10 @@
 //#define array_size 10
 #define TYPE int
 
+static inline unsigned long long my_rand (unsigned long long limit)
+{
+        return ((unsigned long long)(((unsigned long long)rand()<<48)^((unsigned long long)rand()<<32)^((unsigned long long)rand()<<16)^(unsigned long long)rand())) % limit;
+}
 int array_subscript = 0;
 int find_one_noloop_element(TYPE* array, TYPE* array_check, int array_size, int array_check_num)
 {
@@ -28,7 +32,7 @@ void exchange_element(TYPE *array, int k, int j)
 
 int main()
 {
-	int array_size = 10;
+	int array_size = 1000;
 	TYPE array[array_size];
 	TYPE array_check[array_size];
 	int i = 0;
@@ -45,7 +49,8 @@ int main()
 	
 		for (i = array_size-1; i > 1; i--)
 		{
-			j = rand()%i;
+			j = my_rand(i);
+//			j = rand()%i;
 	//		printf("j = %d\n", j);
 			tmp = array[i];
 			array[i] = array[j];
@@ -69,6 +74,7 @@ int main()
 			/* test whether have a round in the pointer chasing array, if it does have, pick up one element which not in array_check[], to exchange which array[tmp_bak] */
 				if(array_check[j] == tmp)
 				{
+					printf("???????????????\n");
 					exchange_element(array,find_one_noloop_element(array, array_check, array_size, i),tmp_bak);
 					tmp = array[tmp_bak];
 				}

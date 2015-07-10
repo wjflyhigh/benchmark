@@ -73,6 +73,7 @@ int main()
 			/* test whether have a round in the pointer chasing array, if it does have, pick up one element which not in array_check[], to exchange which array[tmp_bak] */
 				if(array_check[j] == tmp)
 				{
+					printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 					exchange_element(array,find_one_noloop_element(array, array_check, array_size, i),tmp_bak);
 					tmp = (void*)*(long*)tmp_bak;
 				}

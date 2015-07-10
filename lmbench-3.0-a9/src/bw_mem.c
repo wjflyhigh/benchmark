@@ -342,7 +342,7 @@ rd(iter_t iterations, void *cookie)
 	    while (p <= lastone) {
 		sum += 
 #define	DOIT(i)	p[i]+
-/* for cache line 16B
+/* each cache line read 32 int, to compare the result with each cache read just one time. This test the core performance.
 		DOIT(0) DOIT(4) DOIT(8) DOIT(12) DOIT(16) DOIT(20) DOIT(24)
 		DOIT(28) DOIT(32) DOIT(36) DOIT(40) DOIT(44) DOIT(48) DOIT(52)
 		DOIT(56) DOIT(60) DOIT(64) DOIT(68) DOIT(72) DOIT(76)

@@ -45,12 +45,15 @@ struct _options
 	unsigned long long start_offset, stop_offset;
 	bool offset_mode;
 	bool random_offset_mode;
-	bool random_in_page_mode;
+	bool random_in_page;
 } opts;
 
 static inline unsigned long long my_rand (unsigned long long limit)
 {
-	return ((unsigned long long)(((unsigned long long)rand()<<48)^((unsigned long long)rand()<<32)^((unsigned long long)rand()<<16)^(unsigned long long)rand())) % limit;
+	if (limit == 0)
+		return 0;
+	else
+		return ((unsigned long long)(((unsigned long long)rand()<<48)^((unsigned long long)rand()<<32)^((unsigned long long)rand()<<16)^(unsigned long long)rand())) % limit;
 }
 
 void *pos = 0;
@@ -59,7 +62,8 @@ static double run_randlatinpage(long long size, int ITS)
 {
 	static long long last_size = 1;
 	static bool fastmode = false;
-	if (!pos) pos = &array[opts.start_offset];
+	int page_size = 512;
+	if (!pos) pos = array;
 
 	double clocks_per_it;
 	
@@ -82,26 +86,27 @@ static double run_randlatinpage(long long size, int ITS)
 		int cycle_length = (opts.cycle_len >= 1 ? opts.cycle_len : 1);
 	
 		//Use a variation on Sattolo's algorithm to incrementally generate a random cyclic permutation that increases in size each time.
-		for (long long i=0;i<size;i=i+512)
+		for (long long i=0;i<size;i=i+page_size)
 		{
-			for (long long j=i+512-1;j>=i+1;j--)
-			{
-				if (j < cycle_length) continue;
-				unsigned int k = my_rand(j/cycle_length) * cycle_length + (j%cycle_length);
-				void* temp = array[j];
-				array[j] = array[k];
-				array[k] = temp;
-			}
-			register void* p = pos;
-			while(*p ! = pos)
-			{
-				p = *(void **)p;
-			}
-			*p = i + pos + 512;
-			if(*p > size)
-				*p = pos;
+		        for (long long j=page_size-1;j>0;j--)
+		        {
+		                unsigned int k = my_rand(j/cycle_length) * cycle_length + (j%cycle_length);
+		                void* temp = array[j+i];
+		                array[j+i] = array[k+i];
+		                array[k+i] = temp;
+		        }
+	
+		        register void* p = &array[i];
+		        while(*(void **)p != (void *)&array[i])
+		        {
+		                p = *(void **)p;
+		        }
+		        if(i+page_size >= size)
+		               *(void **) p = &array[0];
+			else
+		        	*(void **)p = &array[i+page_size];
 		}
-/*
+
 		register void* j = pos;
 		putchar (' '); fflush(stdout);
 
@@ -129,8 +134,8 @@ static double run_randlatinpage(long long size, int ITS)
 		
 		long long stop = rdtsc();
 		clocks_per_it =  (double)(stop-start)/(ITS*16);
-		pos = j;
-*/	}
+//		pos = j;
+	}
 	else
 	{
 		//Alternative method with more error for HD swapping. Error = ~6-20 cycles?
@@ -180,6 +185,8 @@ static double run_randlatinpage(long long size, int ITS)
 		printf ("%lld\t%f\n", size*sizeof(void*), clocks_per_it, dummy);	//passing dummy to prevent optimization
 	fflush(stdout);
 	return clocks_per_it;
+
+
 }   
 
 static double run_randlat(long long size, int ITS)
@@ -381,7 +388,7 @@ static double runtest(struct _options opts, int size, int ITS)
 	{
 		case TEST_RANDLAT: return run_randlat(size, ITS);
 		case TEST_DTLB: return run_dtlb(size, ITS);
-		case TEST_RANDLATINPAGE: return run_randlatinpage(size, ITS);
+		case TEST_RANDINPAGELAT: return run_randlatinpage(size, ITS);
 		default: printf ("Invalid test %d\n", opts.test);
 	}
 	return 0.;

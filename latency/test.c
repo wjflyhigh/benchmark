@@ -25,7 +25,15 @@ int main()
 	        array[i] = &array[i];
 	
 	for(long long i = 0; i < size; i++)
+	{
+		if(i%cycle_length == 0)
+		{
+			printf("\n");
+		}
+		if(i%page_size == 0)
+			printf("--------------------------------------------\n");
 		printf("0x%lx ", array[i]);
+	}
 	printf("\n");
 	//Use a variation on Sattolo's algorithm to incrementally generate a random cyclic permutation that increases in size each time.
 	for (long long i=0;i<size;i=i+page_size)

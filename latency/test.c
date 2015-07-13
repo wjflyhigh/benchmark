@@ -57,6 +57,7 @@ static double run_randlatinpage(void* pos, int ITS, long size)
 }
 int main()
 {
+	//long size = 12;
 	long size = 1024*131072;
 	int last_size =1;
 	int cycle_length = 8;
@@ -94,15 +95,18 @@ int main()
 	                array[k+i] = temp;
 	        }
 
-	        register void* p = &array[i];
-	        while(*(void **)p != (void *)&array[i])
-	        {
-	                p = *(void **)p;
-	        }
-	        if(i+page_size >= size)
-	               *(void **) p = &array[0];
-		else
-	        	*(void **)p = &array[i+page_size];
+		for(long long q = 0; q < cycle_length; q++)
+		{
+	        	register void* p = &array[i+q];
+			while(*(void **)p != (void *)&array[i+q])
+	        	{
+	               		p = *(void **)p;
+			}
+			if(i+q+page_size >= size)
+				*(void **)p = &array[q];
+			else
+	        		*(void **)p = &array[i+q+page_size];
+		}
 	}
 /*
 	for(long long i = 0; i < size; i++)

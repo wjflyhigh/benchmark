@@ -1,4 +1,4 @@
-/* 
+/*
   Henry Wong <henry@stuffedcow.net>
   http://blog.stuffedcow.net/2013/01/ivb-cache-replacement/
   
@@ -15,11 +15,8 @@
 #include <errno.h>
 #include <stdint.h>
 
-<<<<<<< HEAD
-=======
 #define POWER8
 #ifdef POWER8
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 #define mftbl() ({uint32_t rval;   \
 		asm volatile("mftbl %0" : "=r" (rval)); rval;})
 #define mftbu() ({uint32_t rval;   \
@@ -44,9 +41,9 @@ double get_nanosecs(struct time_base *start, struct time_base *end)
 	uint64_t tb_start, tb_end;
 	uint64_t tb_l, tb_u;
 
-	tb_l = (uint64_t)start->tbl; 
+	tb_l = (uint64_t)start->tbl;
 	tb_u = (uint64_t)start->tbu;
-	tb_start = (tb_u<<32); 
+	tb_start = (tb_u<<32);
 	tb_start += tb_l;
 
 	tb_l = (uint64_t)end->tbl; 
@@ -56,11 +53,7 @@ double get_nanosecs(struct time_base *start, struct time_base *end)
 
 	return ((tb_end - tb_start)*1e3/512.000);
 }
-<<<<<<< HEAD
-
-=======
 #else
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 inline unsigned long long int rdtsc()
 {
 	unsigned int lo, hi;
@@ -68,16 +61,13 @@ inline unsigned long long int rdtsc()
 	__asm__ volatile (".byte 0x0f, 0x31" : "=a" (lo), "=d" (hi));
 	return (long long)(((unsigned long long)hi)<<32LL) | (unsigned long long) lo;
 }
-<<<<<<< HEAD
-=======
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 
 void **array;
 void * dummy;
 
 #define MIN_ITS	1024
-//#define SPEED 67108864 
+//#define SPEED 67108864
 #define SPEED 8388608
 
 
@@ -108,16 +98,12 @@ static double run_randlat(long long size, int ITS)
 {
 	static long long last_size = 1;
 	static bool fastmode = false;\
-<<<<<<< HEAD
 	struct time_base lastsec, sec0, sec1; /* timing variables */
-=======
-	struct time_base sec0, sec1; /* timing variables */
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
+	//struct time_base sec0, sec1; /* timing variables */
 
 	if (!pos) pos = &array[opts.start_offset];
 
 	double clocks_per_it;
-	
 	if (size < last_size) 
 	{
 		printf ("Panic: size must be increasing\n");
@@ -148,16 +134,12 @@ static double run_randlat(long long size, int ITS)
 		register void* j = pos;
 		putchar (' '); fflush(stdout);
 
-<<<<<<< HEAD
 //		long long start = rdtsc();
-		get_tb(&sec0); /* start timer */
-=======
 #ifdef POWER8
 		get_tb(&sec0); /* start timer */
 #else
 		long long start = rdtsc();
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		for (int i=ITS;i;i--)
 		{
 			j = *(void**)j;
@@ -175,14 +157,12 @@ static double run_randlat(long long size, int ITS)
 			j = *(void**)j;
 			j = *(void**)j;
 			j = *(void**)j;
-			j = *(void**)j;			
+			j = *(void**)j;
 		}	
-<<<<<<< HEAD
 		get_tb(&sec1); /* end timer */
 //		long long stop = rdtsc();
 //		clocks_per_it =  (double)(stop-start)/(ITS*16);
-		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
-=======
+//		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
 #ifdef POWER8
 		get_tb(&sec1); /* end timer */
 		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
@@ -190,7 +170,6 @@ static double run_randlat(long long size, int ITS)
 		long long stop = rdtsc();
 		clocks_per_it =  (double)(stop-start)/(ITS*16);
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		pos = j;
 	}
 	else
@@ -202,16 +181,11 @@ static double run_randlat(long long size, int ITS)
 			addrs[i] = array + my_rand(size);
 		putchar (' '); fflush(stdout);
 
-<<<<<<< HEAD
-		long long start = rdtsc();
-=======
 #ifdef POWER8
 		get_tb(&sec0); /* start timer */
 #else
 		long long start = rdtsc();
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
-		
 		register long long j = 0;
 		for (int i=(MIN_ITS-1)*16;i>=0;i-=16)
 		{
@@ -233,10 +207,6 @@ static double run_randlat(long long size, int ITS)
 			j &= *(long long*)addrs[i+15+j];
 		}	
 		
-<<<<<<< HEAD
-		long long stop = rdtsc();
-		clocks_per_it =  (double)(stop-start)/(MIN_ITS*16);
-=======
 #ifdef POWER8
 		get_tb(&sec1); /* end timer */
 		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
@@ -244,16 +214,15 @@ static double run_randlat(long long size, int ITS)
 		long long stop = rdtsc();
 		clocks_per_it =  (double)(stop-start)/(ITS*16);
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 		dummy = (void*)j;
 	}
 
 	last_size = size;
 
-	
+
 	//printf ("%5d KB: clocks = %f\n", size*(sizeof(void*))/1024, (double)(stop-start)/(ITS<<4), j);
 	
-	
+
 	if (opts.offset_mode)
 		printf ("%f\n", clocks_per_it, dummy);	//passing dummy to prevent optimization
 	else
@@ -266,11 +235,7 @@ static double run_randlat(long long size, int ITS)
 static double run_dtlb(long long size, int ITS)
 {
 	static long long last_size = 1;
-<<<<<<< HEAD
-=======
 	struct time_base sec0, sec1; /* timing variables */
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
-
 	double clocks_per_it;
 	
 	if (size <= last_size) 
@@ -308,16 +273,11 @@ static double run_dtlb(long long size, int ITS)
 	
 	putchar (' '); fflush(stdout);
 
-<<<<<<< HEAD
-	long long start = rdtsc();
-=======
 #ifdef POWER8
 		get_tb(&sec0); /* start timer */
 #else
 		long long start = rdtsc();
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
-	
 	for (int i=ITS;i;i--)
 	{
 		j = *(void**)j;
@@ -335,13 +295,9 @@ static double run_dtlb(long long size, int ITS)
 		j = *(void**)j;
 		j = *(void**)j;
 		j = *(void**)j;
-		j = *(void**)j;			
+		j = *(void**)j;
 	}	
 	
-<<<<<<< HEAD
-	long long stop = rdtsc();
-	clocks_per_it =  (double)(stop-start)/(ITS*16);
-=======
 #ifdef POWER8
 		get_tb(&sec1); /* end timer */
 		clocks_per_it = get_nanosecs(&sec0, &sec1)/(ITS*16);
@@ -349,16 +305,15 @@ static double run_dtlb(long long size, int ITS)
 		long long stop = rdtsc();
 		clocks_per_it =  (double)(stop-start)/(ITS*16);
 #endif
->>>>>>> 129ca0cdbccb631037c73412bc88570c6856474f
 	dummy = j;
 
 	last_size = size;
 
-	
+
 	printf ("%lld\t%f\n", size*sizeof(void*), clocks_per_it, dummy);	//passing dummy to prevent optimization
 	fflush(stdout);
 	return clocks_per_it;
-}   
+} 
 
 
 static double runtest(struct _options opts, int size, int ITS)
@@ -381,7 +336,7 @@ void parse_args (int argc, char ** argv, struct _options &opts)
 	//First argument must be array size.
 	sscanf (argv[1], "%lli", &opts.sizelimit);
 	
-	
+
 	for (int i=2;i<argc;i++)
 	{
 		if (!strcmp ("hugetlb", argv[i]))
@@ -500,7 +455,7 @@ int main(int argc, char ** argv)
 	for (long long i=0;i<opts.sizelimit/sizeof(void*);i++)
 		array[i] = &array[i];
 
-	
+
 	int its = SPEED;
 	//704643072  
 	//512 8 <-- default
@@ -533,7 +488,7 @@ int main(int argc, char ** argv)
 	{
 		long long size = opts.sizelimit/sizeof(void*);
 		its = SPEED/64;
-				
+			
 		for (long long i = opts.start_offset ; i < opts.stop_offset; i+= 64/sizeof(void*))	//hard-coded for 64-byte cache lines
 		while (true)
 		{
@@ -556,7 +511,7 @@ int main(int argc, char ** argv)
 		}
 	}
 
-	
+
 	if (opts.hugetlb)
 	{
 		munmap (array, opts.sizelimit);
